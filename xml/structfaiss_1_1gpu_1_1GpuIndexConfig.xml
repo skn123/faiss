@@ -1,16 +1,19 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="structfaiss_1_1gpu_1_1GpuIndexConfig" kind="struct" language="C++" prot="public">
     <compoundname>faiss::gpu::GpuIndexConfig</compoundname>
     <derivedcompoundref refid="structfaiss_1_1gpu_1_1GpuIndexBinaryFlatConfig" prot="public" virt="non-virtual">faiss::gpu::GpuIndexBinaryFlatConfig</derivedcompoundref>
+    <derivedcompoundref refid="structfaiss_1_1gpu_1_1GpuIndexCagraConfig" prot="public" virt="non-virtual">faiss::gpu::GpuIndexCagraConfig</derivedcompoundref>
     <derivedcompoundref refid="structfaiss_1_1gpu_1_1GpuIndexFlatConfig" prot="public" virt="non-virtual">faiss::gpu::GpuIndexFlatConfig</derivedcompoundref>
     <derivedcompoundref refid="structfaiss_1_1gpu_1_1GpuIndexIVFConfig" prot="public" virt="non-virtual">faiss::gpu::GpuIndexIVFConfig</derivedcompoundref>
-      <sectiondef kind="public-attrib">
+    <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structfaiss_1_1gpu_1_1GpuIndexConfig_1aab05a0aa7b42feae7df4e556a52ead57" prot="public" static="no" mutable="no">
         <type>int</type>
         <definition>int faiss::gpu::GpuIndexConfig::device</definition>
         <argsstring></argsstring>
         <name>device</name>
+        <qualifiedname>faiss::gpu::GpuIndexConfig::device</qualifiedname>
+        <initializer>= 0</initializer>
         <briefdescription>
 <para>GPU device on which the index is resident. </para>
         </briefdescription>
@@ -18,13 +21,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="faiss/gpu/GpuIndex.h" line="20" column="9" bodyfile="faiss/gpu/GpuIndex.h" bodystart="20" bodyend="-1"/>
+        <location file="faiss/gpu/GpuIndex.h" line="34" column="9" bodyfile="faiss/gpu/GpuIndex.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structfaiss_1_1gpu_1_1GpuIndexConfig_1adf7c9461009108a9a433a077ab322d2e" prot="public" static="no" mutable="no">
-        <type>MemorySpace</type>
+        <type><ref refid="namespacefaiss_1_1gpu_1a308a493158ec240731ef7f87029fbd67" kindref="member">MemorySpace</ref></type>
         <definition>MemorySpace faiss::gpu::GpuIndexConfig::memorySpace</definition>
         <argsstring></argsstring>
         <name>memorySpace</name>
+        <qualifiedname>faiss::gpu::GpuIndexConfig::memorySpace</qualifiedname>
+        <initializer>= <ref refid="namespacefaiss_1_1gpu_1a308a493158ec240731ef7f87029fbd67a18edc24f65a6948be1fd9a2c27df51cc" kindref="member">MemorySpace::Device</ref></initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -32,33 +37,40 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="faiss/gpu/GpuIndex.h" line="25" column="17" bodyfile="faiss/gpu/GpuIndex.h" bodystart="25" bodyend="-1"/>
+        <location file="faiss/gpu/GpuIndex.h" line="39" column="17" bodyfile="faiss/gpu/GpuIndex.h" bodystart="39" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
-      <memberdef kind="function" id="structfaiss_1_1gpu_1_1GpuIndexConfig_1adabe0f431b8dec6968ef0abe91b17189" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type></type>
-        <definition>faiss::gpu::GpuIndexConfig::GpuIndexConfig</definition>
-        <argsstring>()</argsstring>
-        <name>GpuIndexConfig</name>
+      <memberdef kind="variable" id="structfaiss_1_1gpu_1_1GpuIndexConfig_1ad0c59b7ef7ac3c1055da1addffb9dbb1" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool faiss::gpu::GpuIndexConfig::use_cuvs</definition>
+        <argsstring></argsstring>
+        <name>use_cuvs</name>
+        <qualifiedname>faiss::gpu::GpuIndexConfig::use_cuvs</qualifiedname>
+        <initializer>= false</initializer>
         <briefdescription>
+<para>Should the index dispatch down to cuVS? </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="faiss/gpu/GpuIndex.h" line="17" column="12" bodyfile="faiss/gpu/GpuIndex.h" bodystart="17" bodyend="17"/>
+        <location file="faiss/gpu/GpuIndex.h" line="45" column="10" bodyfile="faiss/gpu/GpuIndex.h" bodystart="45" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="6">
-        <label>faiss::gpu::GpuIndexIVFPQConfig</label>
-        <link refid="structfaiss_1_1gpu_1_1GpuIndexIVFPQConfig"/>
-        <childnode refid="4" relation="public-inheritance">
+      <node id="2">
+        <label>faiss::gpu::GpuIndexBinaryFlatConfig</label>
+        <link refid="structfaiss_1_1gpu_1_1GpuIndexBinaryFlatConfig"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>faiss::gpu::GpuIndexCagraConfig</label>
+        <link refid="structfaiss_1_1gpu_1_1GpuIndexCagraConfig"/>
+        <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
       <node id="1">
@@ -66,41 +78,41 @@
         <link refid="structfaiss_1_1gpu_1_1GpuIndexConfig"/>
       </node>
       <node id="4">
-        <label>faiss::gpu::GpuIndexIVFConfig</label>
-        <link refid="structfaiss_1_1gpu_1_1GpuIndexIVFConfig"/>
-        <childnode refid="1" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="2">
-        <label>faiss::gpu::GpuIndexBinaryFlatConfig</label>
-        <link refid="structfaiss_1_1gpu_1_1GpuIndexBinaryFlatConfig"/>
-        <childnode refid="1" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>faiss::gpu::GpuIndexIVFFlatConfig</label>
-        <link refid="structfaiss_1_1gpu_1_1GpuIndexIVFFlatConfig"/>
-        <childnode refid="4" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="3">
         <label>faiss::gpu::GpuIndexFlatConfig</label>
         <link refid="structfaiss_1_1gpu_1_1GpuIndexFlatConfig"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
+      <node id="5">
+        <label>faiss::gpu::GpuIndexIVFConfig</label>
+        <link refid="structfaiss_1_1gpu_1_1GpuIndexIVFConfig"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>faiss::gpu::GpuIndexIVFFlatConfig</label>
+        <link refid="structfaiss_1_1gpu_1_1GpuIndexIVFFlatConfig"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
       <node id="7">
+        <label>faiss::gpu::GpuIndexIVFPQConfig</label>
+        <link refid="structfaiss_1_1gpu_1_1GpuIndexIVFPQConfig"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
         <label>faiss::gpu::GpuIndexIVFScalarQuantizerConfig</label>
         <link refid="structfaiss_1_1gpu_1_1GpuIndexIVFScalarQuantizerConfig"/>
-        <childnode refid="4" relation="public-inheritance">
+        <childnode refid="5" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="faiss/gpu/GpuIndex.h" line="16" column="21" bodyfile="faiss/gpu/GpuIndex.h" bodystart="16" bodyend="26"/>
+    <location file="faiss/gpu/GpuIndex.h" line="32" column="1" bodyfile="faiss/gpu/GpuIndex.h" bodystart="32" bodyend="47"/>
     <listofallmembers>
       <member refid="structfaiss_1_1gpu_1_1GpuIndexConfig_1aab05a0aa7b42feae7df4e556a52ead57" prot="public" virt="non-virtual"><scope>faiss::gpu::GpuIndexConfig</scope><name>device</name></member>
-      <member refid="structfaiss_1_1gpu_1_1GpuIndexConfig_1adabe0f431b8dec6968ef0abe91b17189" prot="public" virt="non-virtual"><scope>faiss::gpu::GpuIndexConfig</scope><name>GpuIndexConfig</name></member>
       <member refid="structfaiss_1_1gpu_1_1GpuIndexConfig_1adf7c9461009108a9a433a077ab322d2e" prot="public" virt="non-virtual"><scope>faiss::gpu::GpuIndexConfig</scope><name>memorySpace</name></member>
+      <member refid="structfaiss_1_1gpu_1_1GpuIndexConfig_1ad0c59b7ef7ac3c1055da1addffb9dbb1" prot="public" virt="non-virtual"><scope>faiss::gpu::GpuIndexConfig</scope><name>use_cuvs</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>
