@@ -19,13 +19,13 @@
         <link refid="Index_8h_source"/>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
         <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
         <childnode refid="18" relation="include">
         </childnode>
@@ -59,7 +59,7 @@
         </childnode>
         <childnode refid="27" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="29" relation="include">
         </childnode>
@@ -86,6 +86,8 @@
         <label>faiss/MetricType.h</label>
         <link refid="MetricType_8h_source"/>
         <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
       <node id="42">
@@ -141,11 +143,11 @@
         </childnode>
         <childnode refid="45" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="23" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
@@ -165,7 +167,7 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
       </node>
       <node id="19">
@@ -174,28 +176,28 @@
         <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="11">
+      <node id="10">
         <label>faiss/impl/FaissAssert.h</label>
         <link refid="FaissAssert_8h_source"/>
-        <childnode refid="12" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
       </node>
-      <node id="12">
+      <node id="11">
         <label>faiss/impl/FaissException.h</label>
         <link refid="FaissException_8h_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
         <childnode refid="13" relation="include">
         </childnode>
         <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
@@ -231,7 +233,7 @@
         <link refid="maybe__owned__vector_8h_source"/>
         <childnode refid="21" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
         <childnode refid="22" relation="include">
         </childnode>
@@ -239,15 +241,15 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="8">
+      <node id="15">
         <label>faiss/impl/platform_macros.h</label>
         <link refid="platform__macros_8h_source"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
       <node id="29">
@@ -281,11 +283,11 @@
         </childnode>
         <childnode refid="34" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="35" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
         <childnode refid="36" relation="include">
         </childnode>
@@ -312,10 +314,10 @@
       <node id="21">
         <label>cstddef</label>
       </node>
-      <node id="9">
+      <node id="8">
         <label>cstdint</label>
       </node>
-      <node id="10">
+      <node id="9">
         <label>cstdio</label>
       </node>
       <node id="16">
@@ -330,7 +332,7 @@
       <node id="45">
         <label>cuda_runtime.h</label>
       </node>
-      <node id="13">
+      <node id="12">
         <label>exception</label>
       </node>
       <node id="35">
@@ -348,7 +350,7 @@
       <node id="3">
         <label>stdint.h</label>
       </node>
-      <node id="14">
+      <node id="13">
         <label>string</label>
       </node>
       <node id="18">
@@ -360,7 +362,7 @@
       <node id="28">
         <label>unordered_set</label>
       </node>
-      <node id="15">
+      <node id="14">
         <label>utility</label>
       </node>
       <node id="4">

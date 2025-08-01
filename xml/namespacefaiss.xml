@@ -433,7 +433,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="faiss/MetricType.h" line="22" column="1" bodyfile="faiss/MetricType.h" bodystart="22" bodyend="42"/>
+        <location file="faiss/MetricType.h" line="23" column="1" bodyfile="faiss/MetricType.h" bodystart="23" bodyend="43"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="typedef">
@@ -590,7 +590,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="faiss/MetricType.h" line="45" column="1" bodyfile="faiss/MetricType.h" bodystart="45" bodyend="-1"/>
+        <location file="faiss/MetricType.h" line="46" column="1" bodyfile="faiss/MetricType.h" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacefaiss_1ae0c5f7d2638acf960a3b98e7fd8c1167" prot="public" static="no">
         <type><ref refid="structfaiss_1_1HeapArray" kindref="compound">HeapArray</ref>&lt; <ref refid="structfaiss_1_1CMin" kindref="compound">CMin</ref>&lt; float, int64_t &gt; &gt;</type>
@@ -4069,7 +4069,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="faiss/MetricType.h" line="49" column="16" bodyfile="faiss/MetricType.h" bodystart="49" bodyend="52"/>
+        <location file="faiss/MetricType.h" line="50" column="16" bodyfile="faiss/MetricType.h" bodystart="50" bodyend="53"/>
       </memberdef>
       <memberdef kind="function" id="namespacefaiss_1a80366c0d6f4ee6aea791c7bccf391f73" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
