@@ -85,6 +85,7 @@
     <innerclass refid="structfaiss_1_1IndexBinaryHash" prot="public">faiss::IndexBinaryHash</innerclass>
     <innerclass refid="structfaiss_1_1IndexBinaryHashStats" prot="public">faiss::IndexBinaryHashStats</innerclass>
     <innerclass refid="structfaiss_1_1IndexBinaryHNSW" prot="public">faiss::IndexBinaryHNSW</innerclass>
+    <innerclass refid="structfaiss_1_1IndexBinaryHNSWCagra" prot="public">faiss::IndexBinaryHNSWCagra</innerclass>
     <innerclass refid="structfaiss_1_1IndexBinaryIVF" prot="public">faiss::IndexBinaryIVF</innerclass>
     <innerclass refid="structfaiss_1_1IndexBinaryMultiHash" prot="public">faiss::IndexBinaryMultiHash</innerclass>
     <innerclass refid="structfaiss_1_1IndexFastScan" prot="public">faiss::IndexFastScan</innerclass>

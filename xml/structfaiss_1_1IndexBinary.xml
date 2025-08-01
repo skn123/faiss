@@ -264,6 +264,7 @@
         <reimplementedby refid="structfaiss_1_1IndexBinaryHash_1a2490dc0e115b19195372488d0b3163d0">add</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexBinaryMultiHash_1a454cb87dd8ee1ce95f7aa02d9f7c0a21">add</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexBinaryHNSW_1aca2c449410d48edb72228016463aed5d">add</reimplementedby>
+        <reimplementedby refid="structfaiss_1_1IndexBinaryHNSWCagra_1a7025f344df296c7013e1f0cae6b2ad1f">add</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexBinaryIVF_1aaa0eb1eca49892304ceaa11bd3a5ffa1">add</reimplementedby>
         <param>
           <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
@@ -404,6 +405,7 @@
         <reimplementedby refid="structfaiss_1_1IndexBinaryHash_1a2edc9bfa055aa91e6674127335db8c44">search</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexBinaryMultiHash_1ad556aabde158ffd8c40644c005e87da0">search</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexBinaryHNSW_1ae8d7ab52b6ff6b3b43e6b2122f94424e">search</reimplementedby>
+        <reimplementedby refid="structfaiss_1_1IndexBinaryHNSWCagra_1a27062d5b8113dacd2385e97ee61815f4">search</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexBinaryIVF_1a0e0b02bc84fa9d3980ee66bfe8a9089a">search</reimplementedby>
         <param>
           <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
@@ -946,30 +948,36 @@
         </childnode>
       </node>
       <node id="5">
+        <label>faiss::IndexBinaryHNSWCagra</label>
+        <link refid="structfaiss_1_1IndexBinaryHNSWCagra"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
         <label>faiss::IndexBinaryHash</label>
         <link refid="structfaiss_1_1IndexBinaryHash"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6">
+      <node id="7">
         <label>faiss::IndexBinaryIVF</label>
         <link refid="structfaiss_1_1IndexBinaryIVF"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7">
+      <node id="8">
         <label>faiss::IndexBinaryMultiHash</label>
         <link refid="structfaiss_1_1IndexBinaryMultiHash"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8">
+      <node id="9">
         <label>faiss::gpu::GpuIndexBinaryCagra</label>
         <link refid="structfaiss_1_1gpu_1_1GpuIndexBinaryCagra"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9">
+      <node id="10">
         <label>faiss::gpu::GpuIndexBinaryFlat</label>
         <link refid="classfaiss_1_1gpu_1_1GpuIndexBinaryFlat"/>
         <childnode refid="1" relation="public-inheritance">
