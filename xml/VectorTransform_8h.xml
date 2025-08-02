@@ -20,10 +20,6 @@
         </childnode>
         <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
       </node>
       <node id="5">
         <label>faiss/MetricType.h</label>
@@ -97,9 +93,6 @@
       </node>
       <node id="11">
         <label>string</label>
-      </node>
-      <node id="16">
-        <label>typeinfo</label>
       </node>
       <node id="12">
         <label>utility</label>
