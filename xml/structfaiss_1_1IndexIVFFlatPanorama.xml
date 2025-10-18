@@ -1,18 +1,46 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
-  <compounddef id="structfaiss_1_1IndexIVFFlat" kind="struct" language="C++" prot="public">
-    <compoundname>faiss::IndexIVFFlat</compoundname>
-    <basecompoundref refid="structfaiss_1_1IndexIVF" prot="public" virt="non-virtual">faiss::IndexIVF</basecompoundref>
-    <derivedcompoundref refid="structfaiss_1_1IndexIVFFlatDedup" prot="public" virt="non-virtual">faiss::IndexIVFFlatDedup</derivedcompoundref>
-    <derivedcompoundref refid="structfaiss_1_1IndexIVFFlatPanorama" prot="public" virt="non-virtual">faiss::IndexIVFFlatPanorama</derivedcompoundref>
-    <includes refid="IndexIVFFlat_8h" local="no">IndexIVFFlat.h</includes>
+  <compounddef id="structfaiss_1_1IndexIVFFlatPanorama" kind="struct" language="C++" prot="public">
+    <compoundname>faiss::IndexIVFFlatPanorama</compoundname>
+    <basecompoundref refid="structfaiss_1_1IndexIVFFlat" prot="public" virt="non-virtual">faiss::IndexIVFFlat</basecompoundref>
+    <includes refid="IndexIVFFlatPanorama_8h" local="no">IndexIVFFlatPanorama.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structfaiss_1_1IndexIVFFlatPanorama_1a2b3ba48db34335ebf1a1505bcefa5ce4" prot="private" static="no" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t faiss::IndexIVFFlatPanorama::n_levels</definition>
+        <argsstring></argsstring>
+        <name>n_levels</name>
+        <qualifiedname>faiss::IndexIVFFlatPanorama::n_levels</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="faiss/IndexIVFFlatPanorama.h" line="56" column="18" bodyfile="faiss/IndexIVFFlatPanorama.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfaiss_1_1IndexIVFFlatPanorama_1aad0419e3bdd8bcb26b3b35a13a7fc15c" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structfaiss_1_1MaybeOwnedVector" kindref="compound">MaybeOwnedVector</ref>&lt; float &gt; &gt;</type>
+        <definition>std::vector&lt;MaybeOwnedVector&lt;float&gt; &gt; faiss::IndexIVFFlatPanorama::cum_sums</definition>
+        <argsstring></argsstring>
+        <name>cum_sums</name>
+        <qualifiedname>faiss::IndexIVFFlatPanorama::cum_sums</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="faiss/IndexIVFFlatPanorama.h" line="57" column="17" bodyfile="faiss/IndexIVFFlatPanorama.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="structfaiss_1_1IndexIVFFlat_1a0bd6a2d2a6bbe8bf9edff3d36eff8eb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="structfaiss_1_1IndexIVFFlatPanorama_1a0bf704a9a7bb615db79b9638af436591" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
         <type></type>
-        <definition>faiss::IndexIVFFlat::IndexIVFFlat</definition>
-        <argsstring>(Index *quantizer, size_t d, size_t nlist_, MetricType=METRIC_L2, bool own_invlists=true)</argsstring>
-        <name>IndexIVFFlat</name>
-        <qualifiedname>faiss::IndexIVFFlat::IndexIVFFlat</qualifiedname>
+        <definition>faiss::IndexIVFFlatPanorama::IndexIVFFlatPanorama</definition>
+        <argsstring>(Index *quantizer, size_t d, size_t nlist_, int n_levels, MetricType=METRIC_L2, bool own_invlists=true)</argsstring>
+        <name>IndexIVFFlatPanorama</name>
+        <qualifiedname>faiss::IndexIVFFlatPanorama::IndexIVFFlatPanorama</qualifiedname>
         <param>
           <type><ref refid="structfaiss_1_1Index" kindref="compound">Index</ref> *</type>
           <declname>quantizer</declname>
@@ -24,6 +52,10 @@
         <param>
           <type>size_t</type>
           <declname>nlist_</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_levels</declname>
         </param>
         <param>
           <type><ref refid="namespacefaiss_1afd12191c638da74760ff397cf319752c" kindref="member">MetricType</ref></type>
@@ -40,7 +72,65 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="faiss/IndexIVFFlat.h" line="25" column="5"/>
+        <location file="faiss/IndexIVFFlatPanorama.h" line="39" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="structfaiss_1_1IndexIVFFlatPanorama_1a892bca2b82d19902f792cc09d7711eb6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="structfaiss_1_1InvertedListScanner" kindref="compound">InvertedListScanner</ref> *</type>
+        <definition>InvertedListScanner * faiss::IndexIVFFlatPanorama::get_InvertedListScanner</definition>
+        <argsstring>(bool store_pairs, const IDSelector *sel, const IVFSearchParameters *params) const override</argsstring>
+        <name>get_InvertedListScanner</name>
+        <qualifiedname>faiss::IndexIVFFlatPanorama::get_InvertedListScanner</qualifiedname>
+        <reimplements refid="structfaiss_1_1IndexIVFFlat_1a9b5ad8fe0e670f803a9292d6af2966fa">get_InvertedListScanner</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>store_pairs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structfaiss_1_1IDSelector" kindref="compound">IDSelector</ref> *</type>
+          <declname>sel</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structfaiss_1_1SearchParametersIVF" kindref="compound">IVFSearchParameters</ref> *</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a scanner for this index (store_pairs means ignore labels)</para>
+<para>The default search implementation uses this to compute the distances. Use sel instead of params-&gt;sel, because sel is initialized with params-&gt;sel, but may get overridden by <ref refid="structfaiss_1_1IndexIVF" kindref="compound">IndexIVF</ref>&apos;s internal logic. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="faiss/IndexIVFFlatPanorama.h" line="47" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="structfaiss_1_1IndexIVFFlatPanorama_1a903b66bafb3113dd9b43fc7e6c5c8173" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void faiss::IndexIVFFlatPanorama::reconstruct_from_offset</definition>
+        <argsstring>(int64_t list_no, int64_t offset, float *recons) const override</argsstring>
+        <name>reconstruct_from_offset</name>
+        <qualifiedname>faiss::IndexIVFFlatPanorama::reconstruct_from_offset</qualifiedname>
+        <reimplements refid="structfaiss_1_1IndexIVFFlat_1a12194f155176f68a779c1a41a1b2c2fb">reconstruct_from_offset</reimplements>
+        <param>
+          <type>int64_t</type>
+          <declname>list_no</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>recons</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reconstruct a vector given the location in terms of (inv list index + inv list offset) instead of the id.</para>
+<para>Useful for reconstructing when the direct_map is not maintained and the inv list offset is computed by <ref refid="structfaiss_1_1IndexIVF_1aa5cf61c63eb9ccc68edc13fe8f5ba854" kindref="member">search_preassigned()</ref> with <computeroutput>store_pairs</computeroutput> set. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="faiss/IndexIVFFlatPanorama.h" line="52" column="10"/>
       </memberdef>
       <memberdef kind="function" id="structfaiss_1_1IndexIVFFlat_1ae78a755e5cd0e53aed9154d168bcc653" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -210,67 +300,6 @@
         </inbodydescription>
         <location file="faiss/IndexIVFFlat.h" line="46" column="10"/>
       </memberdef>
-      <memberdef kind="function" id="structfaiss_1_1IndexIVFFlat_1a9b5ad8fe0e670f803a9292d6af2966fa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
-        <type><ref refid="structfaiss_1_1InvertedListScanner" kindref="compound">InvertedListScanner</ref> *</type>
-        <definition>InvertedListScanner * faiss::IndexIVFFlat::get_InvertedListScanner</definition>
-        <argsstring>(bool store_pairs, const IDSelector *sel, const IVFSearchParameters *params) const override</argsstring>
-        <name>get_InvertedListScanner</name>
-        <qualifiedname>faiss::IndexIVFFlat::get_InvertedListScanner</qualifiedname>
-        <reimplements refid="structfaiss_1_1IndexIVF_1ae6a86ceb8c3e142b6c2f26215f1f55ba">get_InvertedListScanner</reimplements>
-        <reimplementedby refid="structfaiss_1_1IndexIVFFlatPanorama_1a892bca2b82d19902f792cc09d7711eb6">get_InvertedListScanner</reimplementedby>
-        <param>
-          <type>bool</type>
-          <declname>store_pairs</declname>
-        </param>
-        <param>
-          <type>const <ref refid="structfaiss_1_1IDSelector" kindref="compound">IDSelector</ref> *</type>
-          <declname>sel</declname>
-        </param>
-        <param>
-          <type>const <ref refid="structfaiss_1_1SearchParametersIVF" kindref="compound">IVFSearchParameters</ref> *</type>
-          <declname>params</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-<para>Get a scanner for this index (store_pairs means ignore labels)</para>
-<para>The default search implementation uses this to compute the distances. Use sel instead of params-&gt;sel, because sel is initialized with params-&gt;sel, but may get overridden by <ref refid="structfaiss_1_1IndexIVF" kindref="compound">IndexIVF</ref>&apos;s internal logic. </para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="faiss/IndexIVFFlat.h" line="52" column="25"/>
-      </memberdef>
-      <memberdef kind="function" id="structfaiss_1_1IndexIVFFlat_1a12194f155176f68a779c1a41a1b2c2fb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
-        <type>void</type>
-        <definition>void faiss::IndexIVFFlat::reconstruct_from_offset</definition>
-        <argsstring>(int64_t list_no, int64_t offset, float *recons) const override</argsstring>
-        <name>reconstruct_from_offset</name>
-        <qualifiedname>faiss::IndexIVFFlat::reconstruct_from_offset</qualifiedname>
-        <reimplements refid="structfaiss_1_1IndexIVF_1ab02ee6dbd2a3c6a2144fc4ad8f7afe4d">reconstruct_from_offset</reimplements>
-        <reimplementedby refid="structfaiss_1_1IndexIVFFlatDedup_1a8e60db84c02836ea5c786678171b55cf">reconstruct_from_offset</reimplementedby>
-        <reimplementedby refid="structfaiss_1_1IndexIVFFlatPanorama_1a903b66bafb3113dd9b43fc7e6c5c8173">reconstruct_from_offset</reimplementedby>
-        <param>
-          <type>int64_t</type>
-          <declname>list_no</declname>
-        </param>
-        <param>
-          <type>int64_t</type>
-          <declname>offset</declname>
-        </param>
-        <param>
-          <type>float *</type>
-          <declname>recons</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-<para>Reconstruct a vector given the location in terms of (inv list index + inv list offset) instead of the id.</para>
-<para>Useful for reconstructing when the direct_map is not maintained and the inv list offset is computed by <ref refid="structfaiss_1_1IndexIVF_1aa5cf61c63eb9ccc68edc13fe8f5ba854" kindref="member">search_preassigned()</ref> with <computeroutput>store_pairs</computeroutput> set. </para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="faiss/IndexIVFFlat.h" line="57" column="10"/>
-      </memberdef>
       <memberdef kind="function" id="structfaiss_1_1IndexIVFFlat_1a1464960b17488f8ee8ae600c07f7b72c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>void faiss::IndexIVFFlat::sa_decode</definition>
@@ -324,20 +353,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="faiss/IndexIVFFlat.h" line="60" column="10"/>
-      </memberdef>
-      <memberdef kind="function" id="structfaiss_1_1IndexIVFFlat_1a22b8eebcf0685fc484886913f4296382" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>faiss::IndexIVFFlat::IndexIVFFlat</definition>
-        <argsstring>()</argsstring>
-        <name>IndexIVFFlat</name>
-        <qualifiedname>faiss::IndexIVFFlat::IndexIVFFlat</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="faiss/IndexIVFFlat.h" line="62" column="5"/>
       </memberdef>
       <memberdef kind="function" id="structfaiss_1_1IndexIVF_1a47a3b7665e9d2be41c6d3b2e9144b73f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -2306,189 +2321,195 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>Inverted file with stored vectors. Here the inverted file pre-selects the vectors to be searched, but they are not otherwise encoded, the code array just contains the raw float entries. </para>
+<para>Panorama adaptation of <ref refid="structfaiss_1_1IndexIVFFlat" kindref="compound">IndexIVFFlat</ref> following <ulink url="https://www.arxiv.org/pdf/2510.00566">https://www.arxiv.org/pdf/2510.00566</ulink>.</para>
+<para>IDEA: Panorama adapts the storage layout within each cluster and uses pruning with bounds to improve the search performance. Combined with orthogonal transforms upstream that concentrate the energy in the early dimensions (like PCA, Cayley, etc.), Panorama can prune up to 95% of the vectors in the cluster.</para>
+<para>OVERHEAD: To be more efficient, we compute the residual energies at insertion time and store them along the vectors, which comes with an additional storage overhead of exactly (nlevels + 1) floats per vector. Add time is also slightly higher due to the overhead of transposing the vectors.</para>
+<para>NOTE: We inherit from <ref refid="structfaiss_1_1IndexIVFFlat" kindref="compound">IndexIVFFlat</ref> instead of <ref refid="structfaiss_1_1IndexIVF" kindref="compound">IndexIVF</ref> so we can keep the same insertion logic. The code responsible for level-oriented storage is in <computeroutput><ref refid="structfaiss_1_1ArrayInvertedListsPanorama" kindref="compound">ArrayInvertedListsPanorama</ref></computeroutput>, which is a struct member of <computeroutput><ref refid="structfaiss_1_1IndexIVF" kindref="compound">IndexIVF</ref></computeroutput>. </para>
     </detaileddescription>
     <inheritancegraph>
-      <node id="3">
+      <node id="4">
         <label>faiss::Index</label>
         <link refid="structfaiss_1_1Index"/>
       </node>
-      <node id="2">
+      <node id="3">
         <label>faiss::IndexIVF</label>
         <link refid="structfaiss_1_1IndexIVF"/>
-        <childnode refid="3" relation="public-inheritance">
-        </childnode>
         <childnode refid="4" relation="public-inheritance">
         </childnode>
-      </node>
-      <node id="1">
-        <label>faiss::IndexIVFFlat</label>
-        <link refid="structfaiss_1_1IndexIVFFlat"/>
-        <childnode refid="2" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6">
-        <label>faiss::IndexIVFFlatDedup</label>
-        <link refid="structfaiss_1_1IndexIVFFlatDedup"/>
-        <childnode refid="1" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7">
-        <label>faiss::IndexIVFFlatPanorama</label>
-        <link refid="structfaiss_1_1IndexIVFFlatPanorama"/>
-        <childnode refid="1" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>faiss::IndexIVFInterface</label>
-        <link refid="structfaiss_1_1IndexIVFInterface"/>
         <childnode refid="5" relation="public-inheritance">
         </childnode>
       </node>
+      <node id="2">
+        <label>faiss::IndexIVFFlat</label>
+        <link refid="structfaiss_1_1IndexIVFFlat"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>faiss::IndexIVFFlatPanorama</label>
+        <link refid="structfaiss_1_1IndexIVFFlatPanorama"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
       <node id="5">
+        <label>faiss::IndexIVFInterface</label>
+        <link refid="structfaiss_1_1IndexIVFInterface"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
         <label>faiss::Level1Quantizer</label>
         <link refid="structfaiss_1_1Level1Quantizer"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6">
+      <node id="7">
         <label>faiss::ClusteringParameters</label>
         <link refid="structfaiss_1_1ClusteringParameters"/>
       </node>
-      <node id="8">
+      <node id="9">
         <label>faiss::DirectMap</label>
         <link refid="structfaiss_1_1DirectMap"/>
       </node>
-      <node id="3">
+      <node id="4">
         <label>faiss::Index</label>
         <link refid="structfaiss_1_1Index"/>
       </node>
-      <node id="2">
+      <node id="3">
         <label>faiss::IndexIVF</label>
         <link refid="structfaiss_1_1IndexIVF"/>
-        <childnode refid="3" relation="public-inheritance">
-        </childnode>
         <childnode refid="4" relation="public-inheritance">
         </childnode>
-        <childnode refid="7" relation="usage">
-          <edgelabel>invlists</edgelabel>
+        <childnode refid="5" relation="public-inheritance">
         </childnode>
         <childnode refid="8" relation="usage">
+          <edgelabel>invlists</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
           <edgelabel>direct_map</edgelabel>
         </childnode>
       </node>
-      <node id="1">
+      <node id="2">
         <label>faiss::IndexIVFFlat</label>
         <link refid="structfaiss_1_1IndexIVFFlat"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>faiss::IndexIVFFlatPanorama</label>
+        <link refid="structfaiss_1_1IndexIVFFlatPanorama"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4">
+      <node id="5">
         <label>faiss::IndexIVFInterface</label>
         <link refid="structfaiss_1_1IndexIVFInterface"/>
-        <childnode refid="5" relation="public-inheritance">
+        <childnode refid="6" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7">
+      <node id="8">
         <label>faiss::InvertedLists</label>
         <link refid="structfaiss_1_1InvertedLists"/>
       </node>
-      <node id="5">
+      <node id="6">
         <label>faiss::Level1Quantizer</label>
         <link refid="structfaiss_1_1Level1Quantizer"/>
-        <childnode refid="3" relation="usage">
+        <childnode refid="4" relation="usage">
           <edgelabel>clustering_index</edgelabel>
           <edgelabel>quantizer</edgelabel>
         </childnode>
-        <childnode refid="6" relation="usage">
+        <childnode refid="7" relation="usage">
           <edgelabel>cp</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="faiss/IndexIVFFlat.h" line="24" column="1" bodyfile="faiss/IndexIVFFlat.h" bodystart="24" bodyend="63"/>
+    <location file="faiss/IndexIVFFlatPanorama.h" line="38" column="1" bodyfile="faiss/IndexIVFFlatPanorama.h" bodystart="38" bodyend="58"/>
     <listofallmembers>
-      <member refid="structfaiss_1_1IndexIVF_1a821002a9d3a1a74dc8d6f6072eca4075" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>add</name></member>
-      <member refid="structfaiss_1_1IndexIVFFlat_1ae78a755e5cd0e53aed9154d168bcc653" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>add_core</name></member>
-      <member refid="structfaiss_1_1Index_1aa432f349b82d0909c33aa353b7a01fe1" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>add_ex</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1a23981fa9b4a027d8a43da073d9d2c685" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>add_sa_codes</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1a14e75169bddcd0251134821416b060a1" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>add_with_ids</name></member>
-      <member refid="structfaiss_1_1Index_1ac306752b6e39ee77a97c2a0ac193b8c5" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>add_with_ids_ex</name></member>
-      <member refid="structfaiss_1_1Index_1a010ae05c4ba70d309f9821d9b03182aa" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>assign</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1acb4c54db659b15a5471102ccc2cd2b43" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>by_residual</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1a5a097e5b50f8b220db61b52c6fdaf1f9" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>check_compatible_for_merge</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1a92fd8b2703f8d47c89aa69f39e0fa683" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>check_ids_sorted</name></member>
-      <member refid="structfaiss_1_1Level1Quantizer_1a45d29dd6a5c53789c08e5ceb3f63d989" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>clustering_index</name></member>
-      <member refid="structfaiss_1_1Level1Quantizer_1a28fb5379de2f35f1b86ae5019ec4128f" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>coarse_code_size</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1a46d1aeddb60643c5b3f096147c3e028f" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>code_size</name></member>
-      <member refid="structfaiss_1_1Index_1af317cb1e2ad0bd145f716f2243b693eb" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>component_t</name></member>
-      <member refid="structfaiss_1_1Index_1a1f12e2118b37a511f51d63e1aa9c0c20" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>compute_residual</name></member>
-      <member refid="structfaiss_1_1Index_1aff98fbf8e7dadf9ff528a031c53a43fa" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>compute_residual_n</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1a12bade774680c5ec7a46c48bf7521fcb" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>copy_subset_to</name></member>
-      <member refid="structfaiss_1_1Level1Quantizer_1abb7097ed40b15ba0af08af6d03608f72" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>cp</name></member>
-      <member refid="structfaiss_1_1Index_1a2a002388d2c081c2dbab8508dcefe73d" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>d</name></member>
-      <member refid="structfaiss_1_1Level1Quantizer_1a19831255dc8861b785b9782a32f65a2a" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>decode_listno</name></member>
-      <member refid="structfaiss_1_1IndexIVFFlat_1a2f52063a3e37cc6a9c229a81cf3133e1" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>decode_vectors</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1ae1267a1770ef6c8fa111891110e6fa69" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>direct_map</name></member>
-      <member refid="structfaiss_1_1Index_1a1c60d7a12bf3ad27054963df8cccd93f" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>distance_t</name></member>
-      <member refid="structfaiss_1_1Level1Quantizer_1a91df00b85de103bce33993ce659c832c" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>encode_listno</name></member>
-      <member refid="structfaiss_1_1IndexIVFFlat_1a7dc16a5d92348098da7f50324a98e8e9" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>encode_vectors</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1a4f5c54c91a5671a697904c32ff5218ce" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>get_CodePacker</name></member>
-      <member refid="structfaiss_1_1Index_1a5d7e4b432ee751157d470256a7fe8afc" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>get_distance_computer</name></member>
-      <member refid="structfaiss_1_1IndexIVFFlat_1a9b5ad8fe0e670f803a9292d6af2966fa" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>get_InvertedListScanner</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1a521b6f7be5cacd0a1707e42ae9dfd018" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>get_list_size</name></member>
-      <member refid="structfaiss_1_1Index_1a7b8cc435b5619d5d8382010a424bf67e" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>Index</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1a8509f0a59c3be6ad4a2ce71a6db8de3e" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>IndexIVF</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1a74c689174e4a82a35512cafdd0878158" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>IndexIVF</name></member>
-      <member refid="structfaiss_1_1IndexIVFFlat_1a0bd6a2d2a6bbe8bf9edff3d36eff8eb0" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>IndexIVFFlat</name></member>
-      <member refid="structfaiss_1_1IndexIVFFlat_1a22b8eebcf0685fc484886913f4296382" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>IndexIVFFlat</name></member>
-      <member refid="structfaiss_1_1IndexIVFInterface_1a480a32625aa7c6ae5fd49afaacfa7fd1" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>IndexIVFInterface</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1aa0e8fc5e04cbd8e0dde61f98bc7dd0bc" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>invlists</name></member>
-      <member refid="structfaiss_1_1Index_1a6e92732617c4dbe364e7678dd8773a7f" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>is_trained</name></member>
-      <member refid="structfaiss_1_1Level1Quantizer_1a7262e1eb542b177308dab0c043e90d01" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>Level1Quantizer</name></member>
-      <member refid="structfaiss_1_1Level1Quantizer_1a7623b6432ff9faee737ebe36b415fa18" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>Level1Quantizer</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1a1c11ce77f459e2ab3e5d9a4c2263ad89" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>make_direct_map</name></member>
-      <member refid="structfaiss_1_1IndexIVFInterface_1a205287f5e7fa7e1d5c5f98e19074c636" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>max_codes</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1a058974c6ac51dbe788fcc1fe004add7e" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>merge_from</name></member>
-      <member refid="structfaiss_1_1Index_1a6f60646d6877658ea4df05e0231ed232" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>metric_arg</name></member>
-      <member refid="structfaiss_1_1Index_1a8e18f641854b2bde83ecff0a2f9a6f4e" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>metric_type</name></member>
-      <member refid="structfaiss_1_1Level1Quantizer_1a1c4fc9d874d9492ee0ea27a5be388fa7" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>nlist</name></member>
-      <member refid="structfaiss_1_1IndexIVFInterface_1a04b49a4e8a7bce73757905062cf3e2d2" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>nprobe</name></member>
-      <member refid="structfaiss_1_1Index_1a6970683faa021b7a6f1a0865c0d4eccd" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>ntotal</name></member>
-      <member refid="structfaiss_1_1Level1Quantizer_1ab688c629cd42122d73517078b87f483d" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>own_fields</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1a5743b18d78fe1b9910d8ff8670f207d7" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>own_invlists</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1a244ec2067da495ff1493687e0048ae02" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>parallel_mode</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1aa221f301cca11e1ab59d6c12e08a0240" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>PARALLEL_MODE_NO_HEAP_INIT</name></member>
-      <member refid="structfaiss_1_1Level1Quantizer_1a3cf99e2ee92b8558a066f821efab95d5" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>quantizer</name></member>
-      <member refid="structfaiss_1_1Level1Quantizer_1a1dcea762fc322fdcffe64f78994edea0" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>quantizer_trains_alone</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1a3c9714bf7fb9a2268ac4f3a46c286151" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>range_search</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1a8c2ff8d112f7f381c8cdcc5229b004fe" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>range_search_preassigned</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1a3b3270dcfa248dc30117644382a54e39" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>reconstruct</name></member>
-      <member refid="structfaiss_1_1Index_1a1dbf5eac7d05ca6271d2fd9bee568218" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>reconstruct_batch</name></member>
-      <member refid="structfaiss_1_1IndexIVFFlat_1a12194f155176f68a779c1a41a1b2c2fb" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>reconstruct_from_offset</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1a7cc286dfbd8bfd43ea4b22173e28231c" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>reconstruct_n</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1a7f4d5e3d38ed2db026780522ffb85b9d" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>remove_ids</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1a4eb943aeb7df30d44ad9b665452bfcf7" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>replace_invlists</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1a47a3b7665e9d2be41c6d3b2e9144b73f" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>reset</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1a89b7f3a7b35db764bc071aa5ab302b1d" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>sa_code_size</name></member>
-      <member refid="structfaiss_1_1IndexIVFFlat_1a1464960b17488f8ee8ae600c07f7b72c" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>sa_decode</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1a9d28b314ee008589eb41ce2823a088b6" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>sa_encode</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1a84cb8115ea19d50c5b53be19b0dae708" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>search</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1ae370aa40139ca15359b1cbdf88c9b3d8" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>search_and_reconstruct</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1ad9acb1903e0ecfa61cb708eca06f2686" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>search_and_return_codes</name></member>
-      <member refid="structfaiss_1_1Index_1a06690b86bad667d42a0387c7cd3359e9" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>search_ex</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1aa5cf61c63eb9ccc68edc13fe8f5ba854" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>search_preassigned</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1a1a896475b88eff587c434dd796afa55a" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>set_direct_map_type</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1a7a1d5eec194db0977b2318c6ed6a2b86" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>train</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1a5d0d6b81571e43af2d226e192ecb7410" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>train_encoder</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1add669495eceb26b5e55f99bb5a51363a" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>train_encoder_num_vectors</name></member>
-      <member refid="structfaiss_1_1Index_1af8f340497140cc8b091f4732c3460537" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>train_ex</name></member>
-      <member refid="structfaiss_1_1Level1Quantizer_1a0069a6ee1e32c2e0c1c7df9a95740dd4" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>train_q1</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1a297563f801130e43485c1818b0e13901" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>update_vectors</name></member>
-      <member refid="structfaiss_1_1Index_1a5590d847c5c2b958affd2a05e58a6f23" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>verbose</name></member>
-      <member refid="structfaiss_1_1Index_1a5fa7dbbb77a2a5c69b444672d2f1b982" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>~Index</name></member>
-      <member refid="structfaiss_1_1IndexIVF_1ade600c4def9726b51f08d4e66263b688" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>~IndexIVF</name></member>
-      <member refid="structfaiss_1_1IndexIVFInterface_1a1f3f3a224926ad0bb98f4fe10aaf8068" prot="public" virt="virtual"><scope>faiss::IndexIVFFlat</scope><name>~IndexIVFInterface</name></member>
-      <member refid="structfaiss_1_1Level1Quantizer_1ab0d7fc7420f306522923a96feddae7ca" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlat</scope><name>~Level1Quantizer</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1a821002a9d3a1a74dc8d6f6072eca4075" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>add</name></member>
+      <member refid="structfaiss_1_1IndexIVFFlat_1ae78a755e5cd0e53aed9154d168bcc653" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>add_core</name></member>
+      <member refid="structfaiss_1_1Index_1aa432f349b82d0909c33aa353b7a01fe1" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>add_ex</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1a23981fa9b4a027d8a43da073d9d2c685" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>add_sa_codes</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1a14e75169bddcd0251134821416b060a1" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>add_with_ids</name></member>
+      <member refid="structfaiss_1_1Index_1ac306752b6e39ee77a97c2a0ac193b8c5" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>add_with_ids_ex</name></member>
+      <member refid="structfaiss_1_1Index_1a010ae05c4ba70d309f9821d9b03182aa" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>assign</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1acb4c54db659b15a5471102ccc2cd2b43" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>by_residual</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1a5a097e5b50f8b220db61b52c6fdaf1f9" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>check_compatible_for_merge</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1a92fd8b2703f8d47c89aa69f39e0fa683" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>check_ids_sorted</name></member>
+      <member refid="structfaiss_1_1Level1Quantizer_1a45d29dd6a5c53789c08e5ceb3f63d989" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>clustering_index</name></member>
+      <member refid="structfaiss_1_1Level1Quantizer_1a28fb5379de2f35f1b86ae5019ec4128f" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>coarse_code_size</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1a46d1aeddb60643c5b3f096147c3e028f" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>code_size</name></member>
+      <member refid="structfaiss_1_1Index_1af317cb1e2ad0bd145f716f2243b693eb" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>component_t</name></member>
+      <member refid="structfaiss_1_1Index_1a1f12e2118b37a511f51d63e1aa9c0c20" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>compute_residual</name></member>
+      <member refid="structfaiss_1_1Index_1aff98fbf8e7dadf9ff528a031c53a43fa" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>compute_residual_n</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1a12bade774680c5ec7a46c48bf7521fcb" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>copy_subset_to</name></member>
+      <member refid="structfaiss_1_1Level1Quantizer_1abb7097ed40b15ba0af08af6d03608f72" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>cp</name></member>
+      <member refid="structfaiss_1_1IndexIVFFlatPanorama_1aad0419e3bdd8bcb26b3b35a13a7fc15c" prot="private" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>cum_sums</name></member>
+      <member refid="structfaiss_1_1Index_1a2a002388d2c081c2dbab8508dcefe73d" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>d</name></member>
+      <member refid="structfaiss_1_1Level1Quantizer_1a19831255dc8861b785b9782a32f65a2a" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>decode_listno</name></member>
+      <member refid="structfaiss_1_1IndexIVFFlat_1a2f52063a3e37cc6a9c229a81cf3133e1" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>decode_vectors</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1ae1267a1770ef6c8fa111891110e6fa69" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>direct_map</name></member>
+      <member refid="structfaiss_1_1Index_1a1c60d7a12bf3ad27054963df8cccd93f" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>distance_t</name></member>
+      <member refid="structfaiss_1_1Level1Quantizer_1a91df00b85de103bce33993ce659c832c" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>encode_listno</name></member>
+      <member refid="structfaiss_1_1IndexIVFFlat_1a7dc16a5d92348098da7f50324a98e8e9" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>encode_vectors</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1a4f5c54c91a5671a697904c32ff5218ce" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>get_CodePacker</name></member>
+      <member refid="structfaiss_1_1Index_1a5d7e4b432ee751157d470256a7fe8afc" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>get_distance_computer</name></member>
+      <member refid="structfaiss_1_1IndexIVFFlatPanorama_1a892bca2b82d19902f792cc09d7711eb6" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>get_InvertedListScanner</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1a521b6f7be5cacd0a1707e42ae9dfd018" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>get_list_size</name></member>
+      <member refid="structfaiss_1_1Index_1a7b8cc435b5619d5d8382010a424bf67e" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>Index</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1a8509f0a59c3be6ad4a2ce71a6db8de3e" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>IndexIVF</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1a74c689174e4a82a35512cafdd0878158" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>IndexIVF</name></member>
+      <member refid="structfaiss_1_1IndexIVFFlat_1a0bd6a2d2a6bbe8bf9edff3d36eff8eb0" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>IndexIVFFlat</name></member>
+      <member refid="structfaiss_1_1IndexIVFFlat_1a22b8eebcf0685fc484886913f4296382" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>IndexIVFFlat</name></member>
+      <member refid="structfaiss_1_1IndexIVFFlatPanorama_1a0bf704a9a7bb615db79b9638af436591" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>IndexIVFFlatPanorama</name></member>
+      <member refid="structfaiss_1_1IndexIVFInterface_1a480a32625aa7c6ae5fd49afaacfa7fd1" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>IndexIVFInterface</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1aa0e8fc5e04cbd8e0dde61f98bc7dd0bc" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>invlists</name></member>
+      <member refid="structfaiss_1_1Index_1a6e92732617c4dbe364e7678dd8773a7f" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>is_trained</name></member>
+      <member refid="structfaiss_1_1Level1Quantizer_1a7262e1eb542b177308dab0c043e90d01" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>Level1Quantizer</name></member>
+      <member refid="structfaiss_1_1Level1Quantizer_1a7623b6432ff9faee737ebe36b415fa18" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>Level1Quantizer</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1a1c11ce77f459e2ab3e5d9a4c2263ad89" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>make_direct_map</name></member>
+      <member refid="structfaiss_1_1IndexIVFInterface_1a205287f5e7fa7e1d5c5f98e19074c636" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>max_codes</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1a058974c6ac51dbe788fcc1fe004add7e" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>merge_from</name></member>
+      <member refid="structfaiss_1_1Index_1a6f60646d6877658ea4df05e0231ed232" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>metric_arg</name></member>
+      <member refid="structfaiss_1_1Index_1a8e18f641854b2bde83ecff0a2f9a6f4e" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>metric_type</name></member>
+      <member refid="structfaiss_1_1IndexIVFFlatPanorama_1a2b3ba48db34335ebf1a1505bcefa5ce4" prot="private" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>n_levels</name></member>
+      <member refid="structfaiss_1_1Level1Quantizer_1a1c4fc9d874d9492ee0ea27a5be388fa7" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>nlist</name></member>
+      <member refid="structfaiss_1_1IndexIVFInterface_1a04b49a4e8a7bce73757905062cf3e2d2" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>nprobe</name></member>
+      <member refid="structfaiss_1_1Index_1a6970683faa021b7a6f1a0865c0d4eccd" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>ntotal</name></member>
+      <member refid="structfaiss_1_1Level1Quantizer_1ab688c629cd42122d73517078b87f483d" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>own_fields</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1a5743b18d78fe1b9910d8ff8670f207d7" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>own_invlists</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1a244ec2067da495ff1493687e0048ae02" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>parallel_mode</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1aa221f301cca11e1ab59d6c12e08a0240" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>PARALLEL_MODE_NO_HEAP_INIT</name></member>
+      <member refid="structfaiss_1_1Level1Quantizer_1a3cf99e2ee92b8558a066f821efab95d5" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>quantizer</name></member>
+      <member refid="structfaiss_1_1Level1Quantizer_1a1dcea762fc322fdcffe64f78994edea0" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>quantizer_trains_alone</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1a3c9714bf7fb9a2268ac4f3a46c286151" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>range_search</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1a8c2ff8d112f7f381c8cdcc5229b004fe" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>range_search_preassigned</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1a3b3270dcfa248dc30117644382a54e39" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>reconstruct</name></member>
+      <member refid="structfaiss_1_1Index_1a1dbf5eac7d05ca6271d2fd9bee568218" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>reconstruct_batch</name></member>
+      <member refid="structfaiss_1_1IndexIVFFlatPanorama_1a903b66bafb3113dd9b43fc7e6c5c8173" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>reconstruct_from_offset</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1a7cc286dfbd8bfd43ea4b22173e28231c" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>reconstruct_n</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1a7f4d5e3d38ed2db026780522ffb85b9d" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>remove_ids</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1a4eb943aeb7df30d44ad9b665452bfcf7" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>replace_invlists</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1a47a3b7665e9d2be41c6d3b2e9144b73f" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>reset</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1a89b7f3a7b35db764bc071aa5ab302b1d" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>sa_code_size</name></member>
+      <member refid="structfaiss_1_1IndexIVFFlat_1a1464960b17488f8ee8ae600c07f7b72c" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>sa_decode</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1a9d28b314ee008589eb41ce2823a088b6" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>sa_encode</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1a84cb8115ea19d50c5b53be19b0dae708" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>search</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1ae370aa40139ca15359b1cbdf88c9b3d8" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>search_and_reconstruct</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1ad9acb1903e0ecfa61cb708eca06f2686" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>search_and_return_codes</name></member>
+      <member refid="structfaiss_1_1Index_1a06690b86bad667d42a0387c7cd3359e9" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>search_ex</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1aa5cf61c63eb9ccc68edc13fe8f5ba854" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>search_preassigned</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1a1a896475b88eff587c434dd796afa55a" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>set_direct_map_type</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1a7a1d5eec194db0977b2318c6ed6a2b86" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>train</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1a5d0d6b81571e43af2d226e192ecb7410" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>train_encoder</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1add669495eceb26b5e55f99bb5a51363a" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>train_encoder_num_vectors</name></member>
+      <member refid="structfaiss_1_1Index_1af8f340497140cc8b091f4732c3460537" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>train_ex</name></member>
+      <member refid="structfaiss_1_1Level1Quantizer_1a0069a6ee1e32c2e0c1c7df9a95740dd4" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>train_q1</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1a297563f801130e43485c1818b0e13901" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>update_vectors</name></member>
+      <member refid="structfaiss_1_1Index_1a5590d847c5c2b958affd2a05e58a6f23" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>verbose</name></member>
+      <member refid="structfaiss_1_1Index_1a5fa7dbbb77a2a5c69b444672d2f1b982" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>~Index</name></member>
+      <member refid="structfaiss_1_1IndexIVF_1ade600c4def9726b51f08d4e66263b688" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>~IndexIVF</name></member>
+      <member refid="structfaiss_1_1IndexIVFInterface_1a1f3f3a224926ad0bb98f4fe10aaf8068" prot="public" virt="virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>~IndexIVFInterface</name></member>
+      <member refid="structfaiss_1_1Level1Quantizer_1ab0d7fc7420f306522923a96feddae7ca" prot="public" virt="non-virtual"><scope>faiss::IndexIVFFlatPanorama</scope><name>~Level1Quantizer</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>
