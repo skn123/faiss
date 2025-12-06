@@ -12,6 +12,7 @@
     <includedby refid="ResultHandler_8h" local="no">faiss/impl/ResultHandler.h</includedby>
     <includedby refid="simd__result__handlers_8h" local="no">faiss/impl/simd_result_handlers.h</includedby>
     <includedby refid="python__callbacks_8h" local="no">faiss/python/python_callbacks.h</includedby>
+    <includedby refid="IndexSVSFaissUtils_8h" local="no">faiss/svs/IndexSVSFaissUtils.h</includedby>
     <includedby refid="hamming_8h" local="no">faiss/utils/hamming.h</includedby>
     <incdepgraph>
       <node id="4">
@@ -311,6 +312,8 @@
         </childnode>
         <childnode refid="55" relation="include">
         </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
       </node>
       <node id="40">
         <label>faiss/impl/LocalSearchQuantizer.h</label>
@@ -420,6 +423,34 @@
         <label>faiss/python/python_callbacks.h</label>
         <link refid="python__callbacks_8h_source"/>
       </node>
+      <node id="55">
+        <label>faiss/svs/IndexSVSFaissUtils.h</label>
+        <link refid="IndexSVSFaissUtils_8h_source"/>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>faiss/svs/IndexSVSFlat.h</label>
+        <link refid="IndexSVSFlat_8h_source"/>
+      </node>
+      <node id="57">
+        <label>faiss/svs/IndexSVSVamana.h</label>
+        <link refid="IndexSVSVamana_8h_source"/>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+      </node>
+      <node id="58">
+        <label>faiss/svs/IndexSVSVamanaLVQ.h</label>
+        <link refid="IndexSVSVamanaLVQ_8h_source"/>
+      </node>
+      <node id="59">
+        <label>faiss/svs/IndexSVSVamanaLeanVec.h</label>
+        <link refid="IndexSVSVamanaLeanVec_8h_source"/>
+      </node>
       <node id="52">
         <label>faiss/utils/distances_fused/avx512.h</label>
         <link refid="avx512_8h_source"/>
@@ -432,7 +463,7 @@
         <label>faiss/utils/distances_fused/simdlib_based.h</label>
         <link refid="simdlib__based_8h_source"/>
       </node>
-      <node id="55">
+      <node id="60">
         <label>faiss/utils/hamming.h</label>
         <link refid="hamming_8h_source"/>
       </node>
@@ -586,7 +617,7 @@
 <codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="structfaiss_1_1IDSelectorAll" kindref="compound">~IDSelectorAll</ref>()<sp/>{}</highlight></codeline>
 <codeline lineno="132"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="133"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="134"><highlight class="comment">///<sp/>does<sp/>an<sp/>AND<sp/>operation<sp/>on<sp/>the<sp/>the<sp/>two<sp/>given<sp/>IDSelector&apos;s<sp/>is_membership</highlight></codeline>
+<codeline lineno="134"><highlight class="comment">///<sp/>does<sp/>an<sp/>AND<sp/>operation<sp/>on<sp/>the<sp/>two<sp/>given<sp/>IDSelector&apos;s<sp/>is_membership</highlight></codeline>
 <codeline lineno="135"><highlight class="comment">///<sp/>results.</highlight></codeline>
 <codeline lineno="136" refid="structfaiss_1_1IDSelectorAnd" refkind="compound"><highlight class="comment"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfaiss_1_1IDSelectorAnd" kindref="compound">IDSelectorAnd</ref><sp/>:<sp/><ref refid="structfaiss_1_1IDSelector" kindref="compound">IDSelector</ref><sp/>{</highlight></codeline>
 <codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structfaiss_1_1IDSelector" kindref="compound">IDSelector</ref>*<sp/>lhs;</highlight></codeline>
@@ -599,7 +630,7 @@
 <codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="structfaiss_1_1IDSelectorAnd" kindref="compound">~IDSelectorAnd</ref>()<sp/>{}</highlight></codeline>
 <codeline lineno="145"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="146"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="147"><highlight class="comment">///<sp/>does<sp/>an<sp/>OR<sp/>operation<sp/>on<sp/>the<sp/>the<sp/>two<sp/>given<sp/>IDSelector&apos;s<sp/>is_membership</highlight></codeline>
+<codeline lineno="147"><highlight class="comment">///<sp/>does<sp/>an<sp/>OR<sp/>operation<sp/>on<sp/>the<sp/>two<sp/>given<sp/>IDSelector&apos;s<sp/>is_membership</highlight></codeline>
 <codeline lineno="148"><highlight class="comment">///<sp/>results.</highlight></codeline>
 <codeline lineno="149" refid="structfaiss_1_1IDSelectorOr" refkind="compound"><highlight class="comment"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfaiss_1_1IDSelectorOr" kindref="compound">IDSelectorOr</ref><sp/>:<sp/><ref refid="structfaiss_1_1IDSelector" kindref="compound">IDSelector</ref><sp/>{</highlight></codeline>
 <codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structfaiss_1_1IDSelector" kindref="compound">IDSelector</ref>*<sp/>lhs;</highlight></codeline>
@@ -612,7 +643,7 @@
 <codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="structfaiss_1_1IDSelectorOr" kindref="compound">~IDSelectorOr</ref>()<sp/>{}</highlight></codeline>
 <codeline lineno="158"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="159"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="160"><highlight class="comment">///<sp/>does<sp/>an<sp/>XOR<sp/>operation<sp/>on<sp/>the<sp/>the<sp/>two<sp/>given<sp/>IDSelector&apos;s<sp/>is_membership</highlight></codeline>
+<codeline lineno="160"><highlight class="comment">///<sp/>does<sp/>an<sp/>XOR<sp/>operation<sp/>on<sp/>the<sp/>two<sp/>given<sp/>IDSelector&apos;s<sp/>is_membership</highlight></codeline>
 <codeline lineno="161"><highlight class="comment">///<sp/>results.</highlight></codeline>
 <codeline lineno="162" refid="structfaiss_1_1IDSelectorXOr" refkind="compound"><highlight class="comment"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfaiss_1_1IDSelectorXOr" kindref="compound">IDSelectorXOr</ref><sp/>:<sp/><ref refid="structfaiss_1_1IDSelector" kindref="compound">IDSelector</ref><sp/>{</highlight></codeline>
 <codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structfaiss_1_1IDSelector" kindref="compound">IDSelector</ref>*<sp/>lhs;</highlight></codeline>
