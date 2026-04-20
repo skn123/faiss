@@ -13461,33 +13461,24 @@
         </inbodydescription>
         <location file="faiss/utils/hamming_distance/hamdis-inl.h" line="54" column="1" declfile="faiss/utils/hamming_distance/hamdis-inl.h" declline="54" declcolumn="1"/>
       </memberdef>
-      <memberdef kind="function" id="namespacefaiss_1af53a51eeba20beeeefb82758e28c7712" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacefaiss_1a2054e07a6f5836428496e956708e1ca9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
-            <type>class Consumer</type>
-          </param>
-          <param>
-            <type>class...</type>
-            <declname>Types</declname>
-            <defname>Types</defname>
+            <type>class F</type>
           </param>
         </templateparamlist>
-        <type>Consumer::T</type>
-        <definition>Consumer::T faiss::dispatch_HammingComputer</definition>
-        <argsstring>(int code_size, Consumer &amp;consumer, Types... args)</argsstring>
-        <name>dispatch_HammingComputer</name>
-        <qualifiedname>faiss::dispatch_HammingComputer</qualifiedname>
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) faiss::with_HammingComputer</definition>
+        <argsstring>(int code_size, F &amp;&amp;f)</argsstring>
+        <name>with_HammingComputer</name>
+        <qualifiedname>faiss::with_HammingComputer</qualifiedname>
         <param>
           <type>int</type>
           <declname>code_size</declname>
         </param>
         <param>
-          <type>Consumer &amp;</type>
-          <declname>consumer</declname>
-        </param>
-        <param>
-          <type>Types...</type>
-          <declname>args</declname>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -13495,7 +13486,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="faiss/utils/hamming_distance/hamdis-inl.h" line="65" column="22" bodyfile="faiss/utils/hamming_distance/hamdis-inl.h" bodystart="65" bodyend="83"/>
+        <location file="faiss/utils/hamming_distance/hamdis-inl.h" line="65" column="10" bodyfile="faiss/utils/hamming_distance/hamdis-inl.h" bodystart="65" bodyend="82"/>
       </memberdef>
       <memberdef kind="function" id="namespacefaiss_1a1d40aec5723474516de576263cc03048" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
