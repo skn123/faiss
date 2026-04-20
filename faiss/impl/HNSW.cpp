@@ -582,9 +582,12 @@ void HNSW::add_with_locks(
 
     locks.unlock(pt_id);
 
-    if (pt_level > max_level) {
-        max_level = pt_level;
-        entry_point = pt_id;
+#pragma omp critical
+    {
+        if (pt_level > max_level) {
+            max_level = pt_level;
+            entry_point = pt_id;
+        }
     }
 }
 
