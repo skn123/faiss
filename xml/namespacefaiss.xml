@@ -212,6 +212,7 @@
     <innerclass refid="structfaiss_1_1LinearTransform" prot="public">faiss::LinearTransform</innerclass>
     <innerclass refid="structfaiss_1_1LocalSearchCoarseQuantizer" prot="public">faiss::LocalSearchCoarseQuantizer</innerclass>
     <innerclass refid="structfaiss_1_1LocalSearchQuantizer" prot="public">faiss::LocalSearchQuantizer</innerclass>
+    <innerclass refid="classfaiss_1_1LockVector" prot="public">faiss::LockVector</innerclass>
     <innerclass refid="structfaiss_1_1MappedFileIOReader" prot="public">faiss::MappedFileIOReader</innerclass>
     <innerclass refid="structfaiss_1_1MaskedInvertedLists" prot="public">faiss::MaskedInvertedLists</innerclass>
     <innerclass refid="structfaiss_1_1MatrixStats" prot="public">faiss::MatrixStats</innerclass>
