@@ -41,6 +41,7 @@
     <includedby refid="index__factory_8h" local="no">faiss/index_factory.h</includedby>
     <includedby refid="IndexSVSFaissUtils_8h" local="no">faiss/svs/IndexSVSFaissUtils.h</includedby>
     <includedby refid="IndexSVSFlat_8h" local="no">faiss/svs/IndexSVSFlat.h</includedby>
+    <includedby refid="IndexSVSIVF_8h" local="no">faiss/svs/IndexSVSIVF.h</includedby>
     <includedby refid="IndexSVSVamana_8h" local="no">faiss/svs/IndexSVSVamana.h</includedby>
     <incdepgraph>
       <node id="1">
@@ -236,6 +237,8 @@
         <childnode refid="99" relation="include">
         </childnode>
         <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
         </childnode>
       </node>
       <node id="9">
@@ -911,24 +914,44 @@
         </childnode>
         <childnode refid="100" relation="include">
         </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
       </node>
       <node id="99">
         <label>faiss/svs/IndexSVSFlat.h</label>
         <link refid="IndexSVSFlat_8h_source"/>
       </node>
       <node id="100">
-        <label>faiss/svs/IndexSVSVamana.h</label>
-        <link refid="IndexSVSVamana_8h_source"/>
+        <label>faiss/svs/IndexSVSIVF.h</label>
+        <link refid="IndexSVSIVF_8h_source"/>
         <childnode refid="101" relation="include">
         </childnode>
         <childnode refid="102" relation="include">
         </childnode>
       </node>
       <node id="101">
+        <label>faiss/svs/IndexSVSIVFLVQ.h</label>
+        <link refid="IndexSVSIVFLVQ_8h_source"/>
+      </node>
+      <node id="102">
+        <label>faiss/svs/IndexSVSIVFLeanVec.h</label>
+        <link refid="IndexSVSIVFLeanVec_8h_source"/>
+      </node>
+      <node id="103">
+        <label>faiss/svs/IndexSVSVamana.h</label>
+        <link refid="IndexSVSVamana_8h_source"/>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+      </node>
+      <node id="104">
         <label>faiss/svs/IndexSVSVamanaLVQ.h</label>
         <link refid="IndexSVSVamanaLVQ_8h_source"/>
       </node>
-      <node id="102">
+      <node id="105">
         <label>faiss/svs/IndexSVSVamanaLeanVec.h</label>
         <link refid="IndexSVSVamanaLeanVec_8h_source"/>
       </node>

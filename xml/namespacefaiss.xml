@@ -187,6 +187,9 @@
     <innerclass refid="structfaiss_1_1IndexShardsTemplate" prot="public">faiss::IndexShardsTemplate</innerclass>
     <innerclass refid="structfaiss_1_1IndexSplitVectors" prot="public">faiss::IndexSplitVectors</innerclass>
     <innerclass refid="structfaiss_1_1IndexSVSFlat" prot="public">faiss::IndexSVSFlat</innerclass>
+    <innerclass refid="structfaiss_1_1IndexSVSIVF" prot="public">faiss::IndexSVSIVF</innerclass>
+    <innerclass refid="structfaiss_1_1IndexSVSIVFLeanVec" prot="public">faiss::IndexSVSIVFLeanVec</innerclass>
+    <innerclass refid="structfaiss_1_1IndexSVSIVFLVQ" prot="public">faiss::IndexSVSIVFLVQ</innerclass>
     <innerclass refid="structfaiss_1_1IndexSVSVamana" prot="public">faiss::IndexSVSVamana</innerclass>
     <innerclass refid="structfaiss_1_1IndexSVSVamanaLeanVec" prot="public">faiss::IndexSVSVamanaLeanVec</innerclass>
     <innerclass refid="structfaiss_1_1IndexSVSVamanaLVQ" prot="public">faiss::IndexSVSVamanaLVQ</innerclass>
@@ -291,6 +294,7 @@
     <innerclass refid="structfaiss_1_1SearchParametersPQ" prot="public">faiss::SearchParametersPQ</innerclass>
     <innerclass refid="structfaiss_1_1SearchParametersPreTransform" prot="public">faiss::SearchParametersPreTransform</innerclass>
     <innerclass refid="structfaiss_1_1SearchParametersResidualCoarseQuantizer" prot="public">faiss::SearchParametersResidualCoarseQuantizer</innerclass>
+    <innerclass refid="structfaiss_1_1SearchParametersSVSIVF" prot="public">faiss::SearchParametersSVSIVF</innerclass>
     <innerclass refid="structfaiss_1_1SearchParametersSVSVamana" prot="public">faiss::SearchParametersSVSVamana</innerclass>
     <innerclass refid="structfaiss_1_1simd16float32__tpl" prot="public">faiss::simd16float32_tpl</innerclass>
     <innerclass refid="structfaiss_1_1simd16float32__tpl_3_01SIMDLevel_1_1AVX512_01_4" prot="public">faiss::simd16float32_tpl&lt; SIMDLevel::AVX512 &gt;</innerclass>
@@ -591,6 +595,13 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
+        <enumvalue id="namespacefaiss_1a03c5c5d5d37b280d51fc27de91696bdba5842b12adf753ecf18a64a1614316c21" prot="public">
+          <name>SVS_LVQ8x0</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
         <enumvalue id="namespacefaiss_1a03c5c5d5d37b280d51fc27de91696bdbade7d538232505b7e0bf7dc1f14e93384" prot="public">
           <name>SVS_LeanVec4x4</name>
           <briefdescription>
@@ -625,7 +636,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="faiss/svs/IndexSVSVamana.h" line="42" column="1" bodyfile="faiss/svs/IndexSVSVamana.h" bodystart="42" bodyend="53"/>
+        <location file="faiss/svs/IndexSVSVamana.h" line="42" column="1" bodyfile="faiss/svs/IndexSVSVamana.h" bodystart="42" bodyend="54"/>
       </memberdef>
       <memberdef kind="enum" id="namespacefaiss_1a337b16cea2a5084cf0316bfb33353a9e" prot="public" static="no" strong="yes">
         <type></type>
@@ -8513,7 +8524,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="faiss/svs/IndexSVSVamana.h" line="55" column="33" bodyfile="faiss/svs/IndexSVSVamana.h" bodystart="55" bodyend="78"/>
+        <location file="faiss/svs/IndexSVSVamana.h" line="56" column="33" bodyfile="faiss/svs/IndexSVSVamana.h" bodystart="56" bodyend="81"/>
       </memberdef>
       <memberdef kind="function" id="namespacefaiss_1a80366c0d6f4ee6aea791c7bccf391f73" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
