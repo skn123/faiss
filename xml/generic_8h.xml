@@ -241,6 +241,12 @@
       <node id="16">
         <label>faiss/utils/hamming.h</label>
         <link refid="hamming_8h_source"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>faiss/utils/hamming_distance/hamming_impl.h</label>
+        <link refid="hamming__impl_8h_source"/>
       </node>
     </invincdepgraph>
     <innerclass refid="structfaiss_1_1HeapWithBucketsGenericCMaxFloat" prot="public">faiss::HeapWithBucketsGenericCMaxFloat</innerclass>
