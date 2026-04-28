@@ -3,7 +3,6 @@
   <compounddef id="dir_a990053ab0ed2a0e35fd7924fe582c4e" kind="dir">
     <compoundname>faiss/utils/hamming_distance</compoundname>
     <innerfile refid="common_8h">common.h</innerfile>
-    <innerfile refid="generic-inl_8h">generic-inl.h</innerfile>
     <innerfile refid="hamming__computer-avx2_8h">hamming_computer-avx2.h</innerfile>
     <innerfile refid="hamming__computer-avx512_8h">hamming_computer-avx512.h</innerfile>
     <innerfile refid="hamming__computer-generic_8h">hamming_computer-generic.h</innerfile>

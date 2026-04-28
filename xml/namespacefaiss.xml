@@ -381,6 +381,495 @@
     <innernamespace refid="namespacefaiss_1_1simd__partitioning">faiss::simd_partitioning</innernamespace>
     <innernamespace refid="namespacefaiss_1_1simd__result__handlers">faiss::simd_result_handlers</innernamespace>
     <innernamespace refid="namespacefaiss_1_1svs__io">faiss::svs_io</innernamespace>
+    <sectiondef kind="user-defined">
+      <header>IndexBinaryHNSW dispatch</header>
+      <memberdef kind="function" id="namespacefaiss_1a3b270886d10d9188ac96726f40b669e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>SIMDLevel</type>
+            <declname>SL</declname>
+            <defname>SL</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structfaiss_1_1DistanceComputer" kindref="compound">DistanceComputer</ref> *</type>
+        <definition>DistanceComputer * faiss::make_binary_hnsw_distance_computer_fixSL</definition>
+        <argsstring>(int code_size, IndexBinaryFlat *flat_storage)</argsstring>
+        <name>make_binary_hnsw_distance_computer_fixSL</name>
+        <qualifiedname>faiss::make_binary_hnsw_distance_computer_fixSL</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>code_size</declname>
+        </param>
+        <param>
+          <type><ref refid="structfaiss_1_1IndexBinaryFlat" kindref="compound">IndexBinaryFlat</ref> *</type>
+          <declname>flat_storage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="faiss/impl/binary_hamming/dispatch.h" line="35" column="18" declfile="faiss/impl/binary_hamming/dispatch.h" declline="35" declcolumn="18"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>IndexBinaryIVF dispatch</header>
+      <memberdef kind="function" id="namespacefaiss_1aff1ef71c9f09e97c189600f5afc6af89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>SIMDLevel</type>
+            <declname>SL</declname>
+            <defname>SL</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structfaiss_1_1BinaryInvertedListScanner" kindref="compound">BinaryInvertedListScanner</ref> *</type>
+        <definition>BinaryInvertedListScanner * faiss::make_binary_ivf_scanner_fixSL</definition>
+        <argsstring>(size_t code_size, bool store_pairs)</argsstring>
+        <name>make_binary_ivf_scanner_fixSL</name>
+        <qualifiedname>faiss::make_binary_ivf_scanner_fixSL</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>code_size</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>store_pairs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="faiss/impl/binary_hamming/dispatch.h" line="43" column="27" declfile="faiss/impl/binary_hamming/dispatch.h" declline="43" declcolumn="27"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefaiss_1af631126b783cfd195239fe8ea9886575" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>SIMDLevel</type>
+            <declname>SL</declname>
+            <defname>SL</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void faiss::search_knn_hamming_per_invlist_fixSL</definition>
+        <argsstring>(int code_size, const IndexBinaryIVF *ivf, size_t n, const uint8_t *x, idx_t k, const idx_t *keys_in, const int32_t *coarse_dis, int32_t *distances, idx_t *labels, bool store_pairs, const IVFSearchParameters *params)</argsstring>
+        <name>search_knn_hamming_per_invlist_fixSL</name>
+        <qualifiedname>faiss::search_knn_hamming_per_invlist_fixSL</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>code_size</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structfaiss_1_1IndexBinaryIVF" kindref="compound">IndexBinaryIVF</ref> *</type>
+          <declname>ivf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref> *</type>
+          <declname>keys_in</declname>
+        </param>
+        <param>
+          <type>const int32_t *</type>
+          <declname>coarse_dis</declname>
+        </param>
+        <param>
+          <type>int32_t *</type>
+          <declname>distances</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref> *</type>
+          <declname>labels</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>store_pairs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structfaiss_1_1SearchParametersIVF" kindref="compound">IVFSearchParameters</ref> *</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="faiss/impl/binary_hamming/dispatch.h" line="48" column="6" declfile="faiss/impl/binary_hamming/dispatch.h" declline="48" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefaiss_1a9f0d55d347bd6ba78878e154611527a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>SIMDLevel</type>
+            <declname>SL</declname>
+            <defname>SL</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void faiss::search_knn_hamming_count_fixSL</definition>
+        <argsstring>(int code_size, bool store_pairs, const IndexBinaryIVF *ivf, size_t nx, const uint8_t *x, const idx_t *keys, int k, int32_t *distances, idx_t *labels, const IVFSearchParameters *params)</argsstring>
+        <name>search_knn_hamming_count_fixSL</name>
+        <qualifiedname>faiss::search_knn_hamming_count_fixSL</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>code_size</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>store_pairs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structfaiss_1_1IndexBinaryIVF" kindref="compound">IndexBinaryIVF</ref> *</type>
+          <declname>ivf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nx</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref> *</type>
+          <declname>keys</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>int32_t *</type>
+          <declname>distances</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref> *</type>
+          <declname>labels</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structfaiss_1_1SearchParametersIVF" kindref="compound">IVFSearchParameters</ref> *</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="faiss/impl/binary_hamming/dispatch.h" line="62" column="6" declfile="faiss/impl/binary_hamming/dispatch.h" declline="62" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>IndexBinaryHash dispatch</header>
+      <memberdef kind="function" id="namespacefaiss_1a87655a72b4281832d8ff7df554052ecb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>SIMDLevel</type>
+            <declname>SL</declname>
+            <defname>SL</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void faiss::binary_hash_knn_search_fixSL</definition>
+        <argsstring>(const IndexBinaryHash &amp;index, const uint8_t *q, idx_t k, int32_t *heap_sim, idx_t *heap_ids, size_t &amp;n0, size_t &amp;nlist, size_t &amp;ndis)</argsstring>
+        <name>binary_hash_knn_search_fixSL</name>
+        <qualifiedname>faiss::binary_hash_knn_search_fixSL</qualifiedname>
+        <param>
+          <type>const <ref refid="structfaiss_1_1IndexBinaryHash" kindref="compound">IndexBinaryHash</ref> &amp;</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>int32_t *</type>
+          <declname>heap_sim</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref> *</type>
+          <declname>heap_ids</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>n0</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>nlist</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>ndis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="faiss/impl/binary_hamming/dispatch.h" line="78" column="6" declfile="faiss/impl/binary_hamming/dispatch.h" declline="78" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefaiss_1a2ea099a84b5a37a70556588afedeb7e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>SIMDLevel</type>
+            <declname>SL</declname>
+            <defname>SL</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void faiss::binary_hash_range_search_fixSL</definition>
+        <argsstring>(const IndexBinaryHash &amp;index, const uint8_t *q, int radius, RangeQueryResult &amp;qres, size_t &amp;n0, size_t &amp;nlist, size_t &amp;ndis)</argsstring>
+        <name>binary_hash_range_search_fixSL</name>
+        <qualifiedname>faiss::binary_hash_range_search_fixSL</qualifiedname>
+        <param>
+          <type>const <ref refid="structfaiss_1_1IndexBinaryHash" kindref="compound">IndexBinaryHash</ref> &amp;</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>radius</declname>
+        </param>
+        <param>
+          <type><ref refid="structfaiss_1_1RangeQueryResult" kindref="compound">RangeQueryResult</ref> &amp;</type>
+          <declname>qres</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>n0</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>nlist</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>ndis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="faiss/impl/binary_hamming/dispatch.h" line="89" column="6" declfile="faiss/impl/binary_hamming/dispatch.h" declline="89" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefaiss_1a96e35ce4b7abdd1a4dbb82e22843631c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>SIMDLevel</type>
+            <declname>SL</declname>
+            <defname>SL</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void faiss::binary_multihash_knn_search_fixSL</definition>
+        <argsstring>(const IndexBinaryMultiHash &amp;index, const uint8_t *q, idx_t k, int32_t *heap_sim, idx_t *heap_ids, size_t &amp;n0, size_t &amp;nlist, size_t &amp;ndis)</argsstring>
+        <name>binary_multihash_knn_search_fixSL</name>
+        <qualifiedname>faiss::binary_multihash_knn_search_fixSL</qualifiedname>
+        <param>
+          <type>const <ref refid="structfaiss_1_1IndexBinaryMultiHash" kindref="compound">IndexBinaryMultiHash</ref> &amp;</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>int32_t *</type>
+          <declname>heap_sim</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref> *</type>
+          <declname>heap_ids</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>n0</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>nlist</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>ndis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="faiss/impl/binary_hamming/dispatch.h" line="99" column="6" declfile="faiss/impl/binary_hamming/dispatch.h" declline="99" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefaiss_1a60ef8eeff80f8aa132d7315fc7c85805" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>SIMDLevel</type>
+            <declname>SL</declname>
+            <defname>SL</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void faiss::binary_multihash_range_search_fixSL</definition>
+        <argsstring>(const IndexBinaryMultiHash &amp;index, const uint8_t *q, int radius, RangeQueryResult &amp;qres, size_t &amp;n0, size_t &amp;nlist, size_t &amp;ndis)</argsstring>
+        <name>binary_multihash_range_search_fixSL</name>
+        <qualifiedname>faiss::binary_multihash_range_search_fixSL</qualifiedname>
+        <param>
+          <type>const <ref refid="structfaiss_1_1IndexBinaryMultiHash" kindref="compound">IndexBinaryMultiHash</ref> &amp;</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>radius</declname>
+        </param>
+        <param>
+          <type><ref refid="structfaiss_1_1RangeQueryResult" kindref="compound">RangeQueryResult</ref> &amp;</type>
+          <declname>qres</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>n0</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>nlist</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>ndis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="faiss/impl/binary_hamming/dispatch.h" line="110" column="6" declfile="faiss/impl/binary_hamming/dispatch.h" declline="110" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>IndexIVFSpectralHash dispatch</header>
+      <memberdef kind="function" id="namespacefaiss_1a8d5d8b3bdf35e259cf565838cba14e86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>SIMDLevel</type>
+            <declname>SL</declname>
+            <defname>SL</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structfaiss_1_1InvertedListScanner" kindref="compound">InvertedListScanner</ref> *</type>
+        <definition>InvertedListScanner * faiss::make_spectral_hash_scanner_fixSL</definition>
+        <argsstring>(int code_size, const IndexIVFSpectralHash *index, bool store_pairs)</argsstring>
+        <name>make_spectral_hash_scanner_fixSL</name>
+        <qualifiedname>faiss::make_spectral_hash_scanner_fixSL</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>code_size</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structfaiss_1_1IndexIVFSpectralHash" kindref="compound">IndexIVFSpectralHash</ref> *</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>store_pairs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="faiss/impl/binary_hamming/dispatch.h" line="123" column="21" declfile="faiss/impl/binary_hamming/dispatch.h" declline="123" declcolumn="21"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>IndexPQ polysemous dispatch</header>
+      <memberdef kind="function" id="namespacefaiss_1a8759433f5f09a2a52af0591a759c19e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>SIMDLevel</type>
+            <declname>SL</declname>
+            <defname>SL</defname>
+          </param>
+        </templateparamlist>
+        <type>size_t</type>
+        <definition>size_t faiss::polysemous_inner_loop_fixSL</definition>
+        <argsstring>(int code_size, const IndexPQ *index, const float *dis_table_qi, const uint8_t *q_code, size_t k, float *heap_dis, int64_t *heap_ids, int ht)</argsstring>
+        <name>polysemous_inner_loop_fixSL</name>
+        <qualifiedname>faiss::polysemous_inner_loop_fixSL</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>code_size</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structfaiss_1_1IndexPQ" kindref="compound">IndexPQ</ref> *</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const float *</type>
+          <declname>dis_table_qi</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>q_code</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>heap_dis</declname>
+        </param>
+        <param>
+          <type>int64_t *</type>
+          <declname>heap_ids</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ht</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="faiss/impl/binary_hamming/dispatch.h" line="132" column="8" declfile="faiss/impl/binary_hamming/dispatch.h" declline="132" declcolumn="8"/>
+      </memberdef>
+    </sectiondef>
     <sectiondef kind="enum">
       <memberdef kind="enum" id="namespacefaiss_1ad58caa5fc1ff24471af5f971d4471c85" prot="public" static="no" strong="yes">
         <type>uint8_t</type>
@@ -706,6 +1195,35 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacefaiss_1aa720d0a3336270110940fce7e0f423b5" prot="public" static="no">
+        <type><ref refid="structfaiss_1_1SearchParametersIVF" kindref="compound">SearchParametersIVF</ref></type>
+        <definition>typedef SearchParametersIVF faiss::IVFSearchParameters</definition>
+        <argsstring></argsstring>
+        <name>IVFSearchParameters</name>
+        <qualifiedname>faiss::IVFSearchParameters</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="faiss/impl/binary_hamming/dispatch.h" line="28" column="1" bodyfile="faiss/impl/binary_hamming/dispatch.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" prot="public" static="no">
+        <type>int64_t</type>
+        <definition>typedef int64_t faiss::idx_t</definition>
+        <argsstring></argsstring>
+        <name>idx_t</name>
+        <qualifiedname>faiss::idx_t</qualifiedname>
+        <briefdescription>
+<para>all vector indices are this type </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="faiss/impl/binary_hamming/dispatch.h" line="30" column="1" bodyfile="faiss/impl/binary_hamming/dispatch.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="typedef" id="namespacefaiss_1a728ebc1898262f333334247c4aa3db35" prot="public" static="no">
         <type><ref refid="structfaiss_1_1simd16uint16__tpl" kindref="compound">simd16uint16_tpl</ref>&lt; <ref refid="namespacefaiss_1aca360ba1cc6270b79a9228cdf3e63df5" kindref="member">SINGLE_SIMD_LEVEL_256</ref> &gt;</type>
         <definition>typedef simd16uint16_tpl&lt; SINGLE_SIMD_LEVEL_256 &gt; faiss::simd16uint16</definition>
@@ -735,7 +1253,7 @@
         <location file="faiss/impl/fast_scan/kernels_simd256.h" line="16" column="1" bodyfile="faiss/impl/fast_scan/kernels_simd256.h" bodystart="16" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacefaiss_1a33b1dcce3a5a4c296a1f4553c3299ddd" prot="public" static="no">
-        <type><ref refid="structfaiss_1_1ResultHandlerUnordered" kindref="compound">ResultHandlerUnordered</ref>&lt; float, <ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref> &gt;</type>
+        <type><ref refid="structfaiss_1_1ResultHandlerUnordered" kindref="compound">ResultHandlerUnordered</ref>&lt; float, <ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref> &gt;</type>
         <definition>typedef ResultHandlerUnordered&lt; float, idx_t &gt; faiss::ResultHandler</definition>
         <argsstring></argsstring>
         <name>ResultHandler</name>
@@ -803,20 +1321,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="faiss/IndexIDMap.h" line="127" column="1" bodyfile="faiss/IndexIDMap.h" bodystart="127" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="namespacefaiss_1a0423615e86d00dda03ae73c199c705af" prot="public" static="no">
-        <type><ref refid="structfaiss_1_1SearchParametersIVF" kindref="compound">SearchParametersIVF</ref></type>
-        <definition>using faiss::IVFSearchParameters = typedef SearchParametersIVF</definition>
-        <argsstring></argsstring>
-        <name>IVFSearchParameters</name>
-        <qualifiedname>faiss::IVFSearchParameters</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="faiss/IndexIVF.h" line="79" column="1" bodyfile="faiss/IndexIVF.h" bodystart="79" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacefaiss_1af3735e1903da947aaa2d79389d4ddfd0" prot="public" static="no">
         <type><ref refid="classfaiss_1_1IndexReplicasTemplate" kindref="compound">IndexReplicasTemplate</ref>&lt; <ref refid="structfaiss_1_1Index" kindref="compound">Index</ref> &gt;</type>
@@ -887,21 +1391,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="faiss/invlists/InvertedLists.h" line="396" column="1" bodyfile="faiss/invlists/InvertedLists.h" bodystart="396" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" prot="public" static="no">
-        <type>int64_t</type>
-        <definition>using faiss::idx_t = typedef int64_t</definition>
-        <argsstring></argsstring>
-        <name>idx_t</name>
-        <qualifiedname>faiss::idx_t</qualifiedname>
-        <briefdescription>
-<para>all vector indices are this type </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="faiss/MetricType.h" line="52" column="1" bodyfile="faiss/MetricType.h" bodystart="52" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacefaiss_1ab5013a4e3523c9176d5222115f2c0736" prot="public" static="no">
         <type><ref refid="structfaiss_1_1simd8uint32__tpl" kindref="compound">simd8uint32_tpl</ref>&lt; <ref refid="namespacefaiss_1aca360ba1cc6270b79a9228cdf3e63df5" kindref="member">SINGLE_SIMD_LEVEL_256</ref> &gt;</type>
@@ -2460,6 +2949,430 @@
         <inbodydescription>
         </inbodydescription>
         <location file="faiss/impl/approx_topk/simdlib256-inl.h" line="27" column="25" bodyfile="faiss/impl/approx_topk/simdlib256-inl.h" bodystart="27" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefaiss_1a008c2be900116b8475fb6d85df2f3f29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void faiss::binary_hash_knn_search_fixSL&lt; THE_SIMD_LEVEL &gt;</definition>
+        <argsstring>(const IndexBinaryHash &amp;index, const uint8_t *q, idx_t k, int32_t *heap_sim, idx_t *heap_ids, size_t &amp;n0, size_t &amp;nlist, size_t &amp;ndis)</argsstring>
+        <name>binary_hash_knn_search_fixSL&lt; THE_SIMD_LEVEL &gt;</name>
+        <qualifiedname>faiss::binary_hash_knn_search_fixSL&lt; THE_SIMD_LEVEL &gt;</qualifiedname>
+        <param>
+          <type>const <ref refid="structfaiss_1_1IndexBinaryHash" kindref="compound">IndexBinaryHash</ref> &amp;</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>int32_t *</type>
+          <declname>heap_sim</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref> *</type>
+          <declname>heap_ids</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>n0</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>nlist</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>ndis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="faiss/impl/binary_hamming/IndexBinaryHash_impl.h" line="207" column="1" bodyfile="faiss/impl/binary_hamming/IndexBinaryHash_impl.h" bodystart="207" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefaiss_1a6ca292de82c5b9b80cce39a643d3629f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void faiss::binary_hash_range_search_fixSL&lt; THE_SIMD_LEVEL &gt;</definition>
+        <argsstring>(const IndexBinaryHash &amp;index, const uint8_t *q, int radius, RangeQueryResult &amp;qres, size_t &amp;n0, size_t &amp;nlist, size_t &amp;ndis)</argsstring>
+        <name>binary_hash_range_search_fixSL&lt; THE_SIMD_LEVEL &gt;</name>
+        <qualifiedname>faiss::binary_hash_range_search_fixSL&lt; THE_SIMD_LEVEL &gt;</qualifiedname>
+        <param>
+          <type>const <ref refid="structfaiss_1_1IndexBinaryHash" kindref="compound">IndexBinaryHash</ref> &amp;</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>radius</declname>
+        </param>
+        <param>
+          <type><ref refid="structfaiss_1_1RangeQueryResult" kindref="compound">RangeQueryResult</ref> &amp;</type>
+          <declname>qres</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>n0</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>nlist</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>ndis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="faiss/impl/binary_hamming/IndexBinaryHash_impl.h" line="225" column="1" bodyfile="faiss/impl/binary_hamming/IndexBinaryHash_impl.h" bodystart="225" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefaiss_1aea1f4666fc00ee7d3bf3e3f3fc301432" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void faiss::binary_multihash_knn_search_fixSL&lt; THE_SIMD_LEVEL &gt;</definition>
+        <argsstring>(const IndexBinaryMultiHash &amp;index, const uint8_t *q, idx_t k, int32_t *heap_sim, idx_t *heap_ids, size_t &amp;n0, size_t &amp;nlist, size_t &amp;ndis)</argsstring>
+        <name>binary_multihash_knn_search_fixSL&lt; THE_SIMD_LEVEL &gt;</name>
+        <qualifiedname>faiss::binary_multihash_knn_search_fixSL&lt; THE_SIMD_LEVEL &gt;</qualifiedname>
+        <param>
+          <type>const <ref refid="structfaiss_1_1IndexBinaryMultiHash" kindref="compound">IndexBinaryMultiHash</ref> &amp;</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>int32_t *</type>
+          <declname>heap_sim</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref> *</type>
+          <declname>heap_ids</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>n0</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>nlist</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>ndis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="faiss/impl/binary_hamming/IndexBinaryHash_impl.h" line="244" column="1" bodyfile="faiss/impl/binary_hamming/IndexBinaryHash_impl.h" bodystart="244" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefaiss_1a3f015537f5b58b33a9e8480cb6c9cc69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void faiss::binary_multihash_range_search_fixSL&lt; THE_SIMD_LEVEL &gt;</definition>
+        <argsstring>(const IndexBinaryMultiHash &amp;index, const uint8_t *q, int radius, RangeQueryResult &amp;qres, size_t &amp;n0, size_t &amp;nlist, size_t &amp;ndis)</argsstring>
+        <name>binary_multihash_range_search_fixSL&lt; THE_SIMD_LEVEL &gt;</name>
+        <qualifiedname>faiss::binary_multihash_range_search_fixSL&lt; THE_SIMD_LEVEL &gt;</qualifiedname>
+        <param>
+          <type>const <ref refid="structfaiss_1_1IndexBinaryMultiHash" kindref="compound">IndexBinaryMultiHash</ref> &amp;</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>radius</declname>
+        </param>
+        <param>
+          <type><ref refid="structfaiss_1_1RangeQueryResult" kindref="compound">RangeQueryResult</ref> &amp;</type>
+          <declname>qres</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>n0</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>nlist</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>ndis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="faiss/impl/binary_hamming/IndexBinaryHash_impl.h" line="258" column="1" bodyfile="faiss/impl/binary_hamming/IndexBinaryHash_impl.h" bodystart="258" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefaiss_1a8f22e22a36ff2b596f844398cccb812a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type><ref refid="structfaiss_1_1DistanceComputer" kindref="compound">DistanceComputer</ref> *</type>
+        <definition>DistanceComputer * faiss::make_binary_hnsw_distance_computer_fixSL&lt; THE_SIMD_LEVEL &gt;</definition>
+        <argsstring>(int code_size, IndexBinaryFlat *flat_storage)</argsstring>
+        <name>make_binary_hnsw_distance_computer_fixSL&lt; THE_SIMD_LEVEL &gt;</name>
+        <qualifiedname>faiss::make_binary_hnsw_distance_computer_fixSL&lt; THE_SIMD_LEVEL &gt;</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>code_size</declname>
+        </param>
+        <param>
+          <type><ref refid="structfaiss_1_1IndexBinaryFlat" kindref="compound">IndexBinaryFlat</ref> *</type>
+          <declname>flat_storage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="faiss/impl/binary_hamming/IndexBinaryHNSW_impl.h" line="64" column="1" bodyfile="faiss/impl/binary_hamming/IndexBinaryHNSW_impl.h" bodystart="64" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefaiss_1a87c8f12fe6214ccd4a3490b316fcb1d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type><ref refid="structfaiss_1_1BinaryInvertedListScanner" kindref="compound">BinaryInvertedListScanner</ref> *</type>
+        <definition>BinaryInvertedListScanner * faiss::make_binary_ivf_scanner_fixSL&lt; THE_SIMD_LEVEL &gt;</definition>
+        <argsstring>(size_t code_size, bool store_pairs)</argsstring>
+        <name>make_binary_ivf_scanner_fixSL&lt; THE_SIMD_LEVEL &gt;</name>
+        <qualifiedname>faiss::make_binary_ivf_scanner_fixSL&lt; THE_SIMD_LEVEL &gt;</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>code_size</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>store_pairs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="faiss/impl/binary_hamming/IndexBinaryIVF_impl.h" line="393" column="1" bodyfile="faiss/impl/binary_hamming/IndexBinaryIVF_impl.h" bodystart="393" bodyend="402"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefaiss_1a260ee6d2bac21611bb295a2a3718f8d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void faiss::search_knn_hamming_per_invlist_fixSL&lt; THE_SIMD_LEVEL &gt;</definition>
+        <argsstring>(int code_size, const IndexBinaryIVF *ivf, size_t n, const uint8_t *x, idx_t k, const idx_t *keys_in, const int32_t *coarse_dis, int32_t *distances, idx_t *labels, bool store_pairs, const IVFSearchParameters *params)</argsstring>
+        <name>search_knn_hamming_per_invlist_fixSL&lt; THE_SIMD_LEVEL &gt;</name>
+        <qualifiedname>faiss::search_knn_hamming_per_invlist_fixSL&lt; THE_SIMD_LEVEL &gt;</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>code_size</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structfaiss_1_1IndexBinaryIVF" kindref="compound">IndexBinaryIVF</ref> *</type>
+          <declname>ivf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref> *</type>
+          <declname>keys_in</declname>
+        </param>
+        <param>
+          <type>const int32_t *</type>
+          <declname>coarse_dis</declname>
+        </param>
+        <param>
+          <type>int32_t *</type>
+          <declname>distances</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref> *</type>
+          <declname>labels</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>store_pairs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structfaiss_1_1SearchParametersIVF" kindref="compound">IVFSearchParameters</ref> *</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="faiss/impl/binary_hamming/IndexBinaryIVF_impl.h" line="405" column="1" bodyfile="faiss/impl/binary_hamming/IndexBinaryIVF_impl.h" bodystart="405" bodyend="431"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefaiss_1a91099e9f5ca17931ab4c8c34ca0c5cc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void faiss::search_knn_hamming_count_fixSL&lt; THE_SIMD_LEVEL &gt;</definition>
+        <argsstring>(int code_size, bool store_pairs, const IndexBinaryIVF *ivf, size_t nx, const uint8_t *x, const idx_t *keys, int k, int32_t *distances, idx_t *labels, const IVFSearchParameters *params)</argsstring>
+        <name>search_knn_hamming_count_fixSL&lt; THE_SIMD_LEVEL &gt;</name>
+        <qualifiedname>faiss::search_knn_hamming_count_fixSL&lt; THE_SIMD_LEVEL &gt;</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>code_size</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>store_pairs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structfaiss_1_1IndexBinaryIVF" kindref="compound">IndexBinaryIVF</ref> *</type>
+          <declname>ivf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nx</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref> *</type>
+          <declname>keys</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>int32_t *</type>
+          <declname>distances</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref> *</type>
+          <declname>labels</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structfaiss_1_1SearchParametersIVF" kindref="compound">IVFSearchParameters</ref> *</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="faiss/impl/binary_hamming/IndexBinaryIVF_impl.h" line="434" column="1" bodyfile="faiss/impl/binary_hamming/IndexBinaryIVF_impl.h" bodystart="434" bodyend="458"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefaiss_1ac1aa3ed37b06f29cb5fee627114aa949" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type><ref refid="structfaiss_1_1InvertedListScanner" kindref="compound">InvertedListScanner</ref> *</type>
+        <definition>InvertedListScanner * faiss::make_spectral_hash_scanner_fixSL&lt; THE_SIMD_LEVEL &gt;</definition>
+        <argsstring>(int code_size, const IndexIVFSpectralHash *index, bool store_pairs)</argsstring>
+        <name>make_spectral_hash_scanner_fixSL&lt; THE_SIMD_LEVEL &gt;</name>
+        <qualifiedname>faiss::make_spectral_hash_scanner_fixSL&lt; THE_SIMD_LEVEL &gt;</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>code_size</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structfaiss_1_1IndexIVFSpectralHash" kindref="compound">IndexIVFSpectralHash</ref> *</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>store_pairs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="faiss/impl/binary_hamming/IndexIVFSpectralHash_impl.h" line="143" column="1" bodyfile="faiss/impl/binary_hamming/IndexIVFSpectralHash_impl.h" bodystart="143" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefaiss_1a60aed20192940f1656ae26d0285e5b48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>size_t</type>
+        <definition>size_t faiss::polysemous_inner_loop_fixSL&lt; THE_SIMD_LEVEL &gt;</definition>
+        <argsstring>(int code_size, const IndexPQ *index, const float *dis_table_qi, const uint8_t *q_code, size_t k, float *heap_dis, int64_t *heap_ids, int ht)</argsstring>
+        <name>polysemous_inner_loop_fixSL&lt; THE_SIMD_LEVEL &gt;</name>
+        <qualifiedname>faiss::polysemous_inner_loop_fixSL&lt; THE_SIMD_LEVEL &gt;</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>code_size</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structfaiss_1_1IndexPQ" kindref="compound">IndexPQ</ref> *</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const float *</type>
+          <declname>dis_table_qi</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>q_code</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>heap_dis</declname>
+        </param>
+        <param>
+          <type>int64_t *</type>
+          <declname>heap_ids</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ht</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="faiss/impl/binary_hamming/IndexPQ_impl.h" line="76" column="1" bodyfile="faiss/impl/binary_hamming/IndexPQ_impl.h" bodystart="76" bodyend="90"/>
       </memberdef>
       <memberdef kind="function" id="namespacefaiss_1aa8b83b549454ccc5c41f385976136eb4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>size_t</type>
@@ -4821,7 +5734,7 @@
           <declname>f</declname>
         </param>
         <param>
-          <type>std::vector&lt; std::vector&lt; <ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref> &gt; &gt; *</type>
+          <type>std::vector&lt; std::vector&lt; <ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref> &gt; &gt; *</type>
           <declname>ids</declname>
           <defval>nullptr</defval>
         </param>
@@ -4870,7 +5783,7 @@
           <declname>ivf</declname>
         </param>
         <param>
-          <type>std::vector&lt; std::vector&lt; <ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref> &gt; &gt; &amp;</type>
+          <type>std::vector&lt; std::vector&lt; <ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref> &gt; &gt; &amp;</type>
           <declname>ids</declname>
         </param>
         <briefdescription>
@@ -5047,11 +5960,11 @@
         <name>smawk</name>
         <qualifiedname>faiss::smawk</qualifiedname>
         <param>
-          <type>const <ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type>const <ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>nrows</declname>
         </param>
         <param>
-          <type>const <ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type>const <ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>ncols</declname>
         </param>
         <param>
@@ -5059,7 +5972,7 @@
           <declname>x</declname>
         </param>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref> *</type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref> *</type>
           <declname>argmins</declname>
         </param>
         <briefdescription>
@@ -15406,7 +16319,7 @@
           <declname>all_distances</declname>
         </param>
         <param>
-          <type>const <ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref> *</type>
+          <type>const <ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref> *</type>
           <declname>all_labels</declname>
         </param>
         <param>
@@ -15414,7 +16327,7 @@
           <declname>distances</declname>
         </param>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref> *</type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref> *</type>
           <declname>labels</declname>
         </param>
         <briefdescription>
