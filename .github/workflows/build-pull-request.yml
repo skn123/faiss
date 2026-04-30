@@ -131,6 +131,19 @@ jobs:
         with:
           gpu: ON
           cuvs: ON
+  macos-arm64-Metal-cmake:
+    name: macOS arm64 Metal (cmake)
+    needs: linux-x86_64-cmake
+    runs-on: macos-15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Build and Test (cmake)
+        uses: ./.github/actions/build_cmake
+        with:
+          metal: ON
+          setup_conda: 'false'
+          upload_artifacts: 'false'
   linux-arm64-SVE-cmake:
     name: Linux arm64 SVE (cmake)
     needs: linux-x86_64-cmake
