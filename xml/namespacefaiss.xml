@@ -366,6 +366,7 @@
     <innernamespace refid="namespacefaiss_1_1cppcontrib">faiss::cppcontrib</innernamespace>
     <innernamespace refid="namespacefaiss_1_1detail">faiss::detail</innernamespace>
     <innernamespace refid="namespacefaiss_1_1gpu">faiss::gpu</innernamespace>
+    <innernamespace refid="namespacefaiss_1_1gpu__metal">faiss::gpu_metal</innernamespace>
     <innernamespace refid="namespacefaiss_1_1ivflib">faiss::ivflib</innernamespace>
     <innernamespace refid="namespacefaiss_1_1lsq">faiss::lsq</innernamespace>
     <innernamespace refid="namespacefaiss_1_1nn">faiss::nn</innernamespace>
@@ -1202,6 +1203,21 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacefaiss_1a867d4baa0cd4e14a398a457892a034d8" prot="public" static="no">
+        <type><ref refid="classfaiss_1_1gpu__metal_1_1MetalIndexFlat" kindref="compound">gpu_metal::MetalIndexFlat</ref></type>
+        <definition>using faiss::GpuIndexFlat = typedef gpu_metal::MetalIndexFlat</definition>
+        <argsstring></argsstring>
+        <name>GpuIndexFlat</name>
+        <qualifiedname>faiss::GpuIndexFlat</qualifiedname>
+        <briefdescription>
+<para>When FAISS is built with Metal backend, GpuIndexFlat is MetalIndexFlat. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="faiss/gpu_metal/GpuIndexFlat.h" line="20" column="1" bodyfile="faiss/gpu_metal/GpuIndexFlat.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="typedef" id="namespacefaiss_1aa720d0a3336270110940fce7e0f423b5" prot="public" static="no">
         <type><ref refid="structfaiss_1_1SearchParametersIVF" kindref="compound">SearchParametersIVF</ref></type>
         <definition>typedef SearchParametersIVF faiss::IVFSearchParameters</definition>
@@ -19514,6 +19530,27 @@
 <para>Implementation of k-means clustering with many variants.</para>
 <para>Copyright (c) Facebook, Inc. and its affiliates.</para>
 <para>This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.</para>
+<para>Copyright (c) Meta Platforms, Inc. and its affiliates.</para>
+<para>This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.</para>
+<para>Unified name for flat GPU index when Metal backend is built. Include this when using the Metal backend for API parity with <ref refid="classfaiss_1_1gpu_1_1GpuIndexFlat" kindref="compound">faiss::gpu::GpuIndexFlat</ref>.</para>
+<para>Copyright (c) Meta Platforms, Inc. and its affiliates.</para>
+<para>This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.</para>
+<para>Clone CPU &lt;-&gt; Metal GPU. Mirrors GpuCloner roles for Metal backend.</para>
+<para>Copyright (c) Meta Platforms, Inc. and its affiliates.</para>
+<para>This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.</para>
+<para>Objective-C++ header. Runs L2/IP distance + top-k via Metal compute.</para>
+<para>Copyright (c) Meta Platforms, Inc. and its affiliates.</para>
+<para>This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.</para>
+<para>Objective-C++ header (uses MetalResources).</para>
+<para>Copyright (c) Meta Platforms, Inc. and its affiliates.</para>
+<para>This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.</para>
+<para>Objective-C++ header (uses Metal types).</para>
+<para>Copyright (c) Meta Platforms, Inc. and its affiliates.</para>
+<para>This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.</para>
+<para>This header uses Objective-C types (Metal framework: id, nil, MTLDevice, etc.). For correct IDE/linter behavior, associate this file with &quot;Objective-C++&quot;:</para>
+<para>Copyright (c) Meta Platforms, Inc. and its affiliates.</para>
+<para>This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree.</para>
+<para>Mirrors the role of StandardGpuResources for the Metal backend.</para>
 <para>Safe arithmetic</para>
 <para>PQ4 SIMD packing and accumulation functions</para>
 <para>The basic kernel accumulates nq query vectors with bbs = nb * 2 * 16 vectors and produces an output matrix for that. It is interesting for nq * nb &lt;= 4, otherwise register spilling becomes too large.</para>
