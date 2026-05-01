@@ -12766,27 +12766,25 @@
     <member refid="namespacefaiss_1a0e26e4710a7c276f46b730d8ab6ac1e0" kind="function"><name>hash_bytes</name></member>
     <member refid="namespacefaiss_1ad86caef545c6a7672422d7d34c03f446" kind="function"><name>check_openmp</name></member>
   </compound>
-  <compound refid="namespacefaiss_1_1_0d124" kind="namespace"><name>faiss::@124</name>
-  </compound>
   <compound refid="namespacefaiss_1_1_0d127" kind="namespace"><name>faiss::@127</name>
   </compound>
-  <compound refid="namespacefaiss_1_1_0d128" kind="namespace"><name>faiss::@128</name>
+  <compound refid="namespacefaiss_1_1_0d130" kind="namespace"><name>faiss::@130</name>
   </compound>
-  <compound refid="namespacefaiss_1_1_0d129" kind="namespace"><name>faiss::@129</name>
+  <compound refid="namespacefaiss_1_1_0d131" kind="namespace"><name>faiss::@131</name>
   </compound>
-  <compound refid="namespacefaiss_1_1_0d198" kind="namespace"><name>faiss::@198</name>
+  <compound refid="namespacefaiss_1_1_0d132" kind="namespace"><name>faiss::@132</name>
   </compound>
-  <compound refid="namespacefaiss_1_1_0d202" kind="namespace"><name>faiss::@202</name>
+  <compound refid="namespacefaiss_1_1_0d201" kind="namespace"><name>faiss::@201</name>
   </compound>
-  <compound refid="namespacefaiss_1_1_0d206" kind="namespace"><name>faiss::@206</name>
+  <compound refid="namespacefaiss_1_1_0d205" kind="namespace"><name>faiss::@205</name>
   </compound>
-  <compound refid="namespacefaiss_1_1_0d216" kind="namespace"><name>faiss::@216</name>
+  <compound refid="namespacefaiss_1_1_0d209" kind="namespace"><name>faiss::@209</name>
   </compound>
-  <compound refid="namespacefaiss_1_1_0d228" kind="namespace"><name>faiss::@228</name>
+  <compound refid="namespacefaiss_1_1_0d219" kind="namespace"><name>faiss::@219</name>
   </compound>
-  <compound refid="namespacefaiss_1_1_0d232" kind="namespace"><name>faiss::@232</name>
+  <compound refid="namespacefaiss_1_1_0d231" kind="namespace"><name>faiss::@231</name>
   </compound>
-  <compound refid="namespacefaiss_1_1_0d61" kind="namespace"><name>faiss::@61</name>
+  <compound refid="namespacefaiss_1_1_0d235" kind="namespace"><name>faiss::@235</name>
   </compound>
   <compound refid="namespacefaiss_1_1_0d62" kind="namespace"><name>faiss::@62</name>
   </compound>
@@ -12796,9 +12794,11 @@
   </compound>
   <compound refid="namespacefaiss_1_1_0d65" kind="namespace"><name>faiss::@65</name>
   </compound>
-  <compound refid="namespacefaiss_1_1_0d70" kind="namespace"><name>faiss::@70</name>
+  <compound refid="namespacefaiss_1_1_0d66" kind="namespace"><name>faiss::@66</name>
   </compound>
-  <compound refid="namespacefaiss_1_1_0d84" kind="namespace"><name>faiss::@84</name>
+  <compound refid="namespacefaiss_1_1_0d72" kind="namespace"><name>faiss::@72</name>
+  </compound>
+  <compound refid="namespacefaiss_1_1_0d86" kind="namespace"><name>faiss::@86</name>
   </compound>
   <compound refid="namespacefaiss_1_1cppcontrib" kind="namespace"><name>faiss::cppcontrib</name>
     <member refid="Level2-inl_8h_1ae4e8b14ff45f25eb929a6d6b3cbd3c39" kind="function"><name>isBigEndian</name></member>
@@ -12818,7 +12818,19 @@
   <compound refid="namespacefaiss_1_1cppcontrib_1_1detail_1_1_0d5" kind="namespace"><name>faiss::cppcontrib::detail::@5</name>
   </compound>
   <compound refid="namespacefaiss_1_1detail" kind="namespace"><name>faiss::detail</name>
+    <member refid="namespacefaiss_1_1detail_1a84acaa8966ac6161b02386b195120848" kind="function"><name>normal_quantile</name></member>
+    <member refid="namespacefaiss_1_1detail_1ad15d952172108be3d0a450b2ea11240d" kind="function"><name>chi2_quantile_wh</name></member>
+    <member refid="namespacefaiss_1_1detail_1ac3611a8d1b22c809d8805a48efddff1a" kind="function"><name>precompute_ad_thresholds</name></member>
+    <member refid="namespacefaiss_1_1detail_1ab285156b20d9f45b8a9a2dfdc1727a7c" kind="function"><name>get_actual_rng_seed</name></member>
+    <member refid="namespacefaiss_1_1detail_1aa596c6f97973243c643a260861c838de" kind="function"><name>subsample_training_set</name></member>
+    <member refid="namespacefaiss_1_1detail_1a7d308317647c530f45a96359cbc27fe4" kind="function"><name>compute_centroids</name></member>
+    <member refid="namespacefaiss_1_1detail_1abafebf68b413f497c0fc8e44a180cfb7" kind="function"><name>split_clusters</name></member>
     <member refid="namespacefaiss_1_1detail_1ace450562f499446f88cfc5596a421e9d" kind="function"><name>dispatch_width</name></member>
+    <member refid="namespacefaiss_1_1detail_1a7ac15bd4c2cdcd899265c3c2e3fb17c8" kind="function"><name>pdxify</name></member>
+    <member refid="namespacefaiss_1_1detail_1a9c5d9a9deae725066456d7f760b67b2c" kind="function"><name>de_pdxify</name></member>
+    <member refid="namespacefaiss_1_1detail_1ac244b84c3439d065c674c7eacd5dc3f0" kind="function"><name>compute_partial_norms</name></member>
+    <member refid="namespacefaiss_1_1detail_1aa233c0a54aee4ea6ece0c73d8db01d67" kind="function"><name>block_l2_dispatch</name></member>
+    <member refid="namespacefaiss_1_1detail_1afcf5bb279cd6668c2e4e88ec8d7d4098" kind="function"><name>block_l2</name></member>
   </compound>
   <compound refid="namespacefaiss_1_1detail_1_1simdlib" kind="namespace"><name>faiss::detail::simdlib</name>
     <member refid="simdlib__neon_8h_1afc331a48c5bd48bef46e092ea2fc317f" kind="typedef"><name>remove_cv_ref_t</name></member>
@@ -13359,6 +13371,8 @@
   </compound>
   <compound refid="AdditiveQuantizer_8h" kind="file"><name>AdditiveQuantizer.h</name>
   </compound>
+  <compound refid="AdSampling_8h" kind="file"><name>AdSampling.h</name>
+  </compound>
   <compound refid="approx__topk_8h" kind="file"><name>approx_topk.h</name>
     <member refid="approx__topk_8h_1a58cd97df40a8121322e0648c49186299" kind="enum"><name>ApproxTopK_mode_t</name></member>
     <member refid="approx__topk_8h_1a58cd97df40a8121322e0648c49186299ac1204d260d27c2d08e206bedfd18c326" kind="enumvalue"><name>EXACT_TOPK</name></member>
@@ -13418,6 +13432,8 @@
     <member refid="IndexIVFSpectralHash__impl_8h_1a90ceabc7bbdde9fa3ff474dd960fca4b" kind="variable"><name>hc</name></member>
   </compound>
   <compound refid="IndexPQ__impl_8h" kind="file"><name>IndexPQ_impl.h</name>
+  </compound>
+  <compound refid="ClusteringHelpers_8h" kind="file"><name>ClusteringHelpers.h</name>
   </compound>
   <compound refid="ClusteringInitialization_8h" kind="file"><name>ClusteringInitialization.h</name>
   </compound>
@@ -13514,6 +13530,8 @@
   <compound refid="Panorama_8h" kind="file"><name>Panorama.h</name>
   </compound>
   <compound refid="PanoramaStats_8h" kind="file"><name>PanoramaStats.h</name>
+  </compound>
+  <compound refid="PdxLayout_8h" kind="file"><name>PdxLayout.h</name>
   </compound>
   <compound refid="platform__macros_8h" kind="file"><name>platform_macros.h</name>
     <member refid="platform__macros_8h_1a42c3236f250a1cda84bbf4932470fe89" kind="define"><name>FAISS_API</name></member>
@@ -13822,6 +13840,10 @@
     <member refid="partitioning__simdlib256_8h_1a62387f87dae351b0f051f3a632838870" kind="define"><name>DISPATCH</name></member>
     <member refid="partitioning__simdlib256_8h_1a14a60133503bc69e06b3d7a00ee8be94" kind="variable"><name>min16</name></member>
     <member refid="partitioning__simdlib256_8h_1a66e946a64000e761e027ad2bc10f8329" kind="variable"><name>max16</name></member>
+  </compound>
+  <compound refid="super__kmeans__dispatch_8h" kind="file"><name>super_kmeans_dispatch.h</name>
+  </compound>
+  <compound refid="super__kmeans__kernels_8h" kind="file"><name>super_kmeans_kernels.h</name>
   </compound>
   <compound refid="simd__levels_8h" kind="file"><name>simd_levels.h</name>
     <member refid="simd__levels_8h_1a8945b533221b1c3f6d70b4ef8c95d4f2" kind="define"><name>COMPILE_SIMD_NONE</name></member>
