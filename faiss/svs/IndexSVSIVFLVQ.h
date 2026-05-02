@@ -6,7 +6,7 @@
  */
 
 /*
- * Portions Copyright 2025 Intel Corporation
+ * Portions Copyright 2026 Intel Corporation
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,20 +23,21 @@
 
 #pragma once
 
-#include <faiss/svs/IndexSVSVamana.h>
+#include <faiss/svs/IndexSVSIVF.h>
 
 namespace faiss {
 
-struct IndexSVSVamanaLVQ : IndexSVSVamana {
-    IndexSVSVamanaLVQ();
+struct IndexSVSIVFLVQ : IndexSVSIVF {
+    IndexSVSIVFLVQ();
 
-    IndexSVSVamanaLVQ(
+    IndexSVSIVFLVQ(
             idx_t d,
-            size_t degree,
+            size_t nlist,
             MetricType metric = METRIC_L2,
-            SVSStorageKind storage = SVSStorageKind::SVS_LVQ4x0);
+            SVSStorageKind storage = SVSStorageKind::SVS_LVQ4x0,
+            bool is_static = false);
 
-    ~IndexSVSVamanaLVQ() override = default;
+    ~IndexSVSIVFLVQ() override = default;
 };
 
 } // namespace faiss
