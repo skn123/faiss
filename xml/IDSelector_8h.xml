@@ -391,11 +391,11 @@
         </childnode>
         <childnode refid="66" relation="include">
         </childnode>
-        <childnode refid="71" relation="include">
-        </childnode>
         <childnode refid="74" relation="include">
         </childnode>
-        <childnode refid="78" relation="include">
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
         </childnode>
       </node>
       <node id="47">
@@ -456,11 +456,11 @@
         <childnode refid="65" relation="include">
         </childnode>
       </node>
-      <node id="75">
+      <node id="78">
         <label>faiss/impl/binary_hamming/IndexBinaryHNSW_impl.h</label>
         <link refid="IndexBinaryHNSW__impl_8h_source"/>
       </node>
-      <node id="76">
+      <node id="79">
         <label>faiss/impl/binary_hamming/IndexBinaryHash_impl.h</label>
         <link refid="IndexBinaryHash__impl_8h_source"/>
       </node>
@@ -472,7 +472,7 @@
         <label>faiss/impl/binary_hamming/IndexIVFSpectralHash_impl.h</label>
         <link refid="IndexIVFSpectralHash__impl_8h_source"/>
       </node>
-      <node id="77">
+      <node id="80">
         <label>faiss/impl/binary_hamming/IndexPQ_impl.h</label>
         <link refid="IndexPQ__impl_8h_source"/>
       </node>
@@ -585,28 +585,48 @@
         </childnode>
         <childnode refid="68" relation="include">
         </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
       </node>
       <node id="67">
         <label>faiss/svs/IndexSVSFlat.h</label>
         <link refid="IndexSVSFlat_8h_source"/>
       </node>
       <node id="68">
-        <label>faiss/svs/IndexSVSVamana.h</label>
-        <link refid="IndexSVSVamana_8h_source"/>
+        <label>faiss/svs/IndexSVSIVF.h</label>
+        <link refid="IndexSVSIVF_8h_source"/>
         <childnode refid="69" relation="include">
         </childnode>
         <childnode refid="70" relation="include">
         </childnode>
       </node>
       <node id="69">
+        <label>faiss/svs/IndexSVSIVFLVQ.h</label>
+        <link refid="IndexSVSIVFLVQ_8h_source"/>
+      </node>
+      <node id="70">
+        <label>faiss/svs/IndexSVSIVFLeanVec.h</label>
+        <link refid="IndexSVSIVFLeanVec_8h_source"/>
+      </node>
+      <node id="71">
+        <label>faiss/svs/IndexSVSVamana.h</label>
+        <link refid="IndexSVSVamana_8h_source"/>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+      <node id="72">
         <label>faiss/svs/IndexSVSVamanaLVQ.h</label>
         <link refid="IndexSVSVamanaLVQ_8h_source"/>
       </node>
-      <node id="70">
+      <node id="73">
         <label>faiss/svs/IndexSVSVamanaLeanVec.h</label>
         <link refid="IndexSVSVamanaLeanVec_8h_source"/>
       </node>
-      <node id="72">
+      <node id="75">
         <label>faiss/utils/distances_dispatch.h</label>
         <link refid="distances__dispatch_8h"/>
       </node>
@@ -620,31 +640,31 @@
         <label>faiss/utils/distances_fused/simdlib_kernel-inl.h</label>
         <link refid="simdlib__kernel-inl_8h_source"/>
       </node>
-      <node id="71">
+      <node id="74">
         <label>faiss/utils/extra_distances.h</label>
         <link refid="extra__distances_8h_source"/>
-        <childnode refid="72" relation="include">
-        </childnode>
-        <childnode refid="73" relation="include">
-        </childnode>
-      </node>
-      <node id="74">
-        <label>faiss/utils/hamming.h</label>
-        <link refid="hamming_8h_source"/>
         <childnode refid="75" relation="include">
         </childnode>
         <childnode refid="76" relation="include">
+        </childnode>
+      </node>
+      <node id="77">
+        <label>faiss/utils/hamming.h</label>
+        <link refid="hamming_8h_source"/>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="24" relation="include">
         </childnode>
-        <childnode refid="77" relation="include">
+        <childnode refid="80" relation="include">
         </childnode>
-        <childnode refid="78" relation="include">
+        <childnode refid="81" relation="include">
         </childnode>
       </node>
-      <node id="78">
+      <node id="81">
         <label>faiss/utils/hamming_distance/hamming_impl.h</label>
         <link refid="hamming__impl_8h_source"/>
       </node>
@@ -652,7 +672,7 @@
         <label>faiss/utils/simd_impl/IVFFlatScanner-inl.h</label>
         <link refid="IVFFlatScanner-inl_8h_source"/>
       </node>
-      <node id="73">
+      <node id="76">
         <label>faiss/utils/simd_impl/distances_autovec-inl.h</label>
         <link refid="distances__autovec-inl_8h_source"/>
       </node>
