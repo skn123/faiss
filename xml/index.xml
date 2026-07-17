@@ -4253,6 +4253,7 @@
     <member refid="structfaiss_1_1IndexIDMap2Template_1afbd7827eb740d19fb7f48f734cd05dd4" kind="function"><name>construct_rev_map</name></member>
     <member refid="structfaiss_1_1IndexIDMap2Template_1a751cb1ab67ffa1de83260e7bc72f61fe" kind="function"><name>add_with_ids</name></member>
     <member refid="structfaiss_1_1IndexIDMap2Template_1abe13023a6d58623f3749097a3c412f3b" kind="function"><name>add_with_ids_ex</name></member>
+    <member refid="structfaiss_1_1IndexIDMap2Template_1a7c6706c042c6293f008269022256fc97" kind="function"><name>add_sa_codes</name></member>
     <member refid="structfaiss_1_1IndexIDMap2Template_1a8bd3808ffe012654687a584f5e553d50" kind="function"><name>remove_ids</name></member>
     <member refid="structfaiss_1_1IndexIDMap2Template_1a2c3380bb909224c37d536316134d348a" kind="function"><name>reconstruct</name></member>
     <member refid="structfaiss_1_1IndexIDMap2Template_1a35a2f9d4b5ff5c13ba4da8bd4385d14a" kind="function"><name>check_consistency</name></member>
@@ -4269,7 +4270,6 @@
     <member refid="structfaiss_1_1IndexIDMapTemplate_1ac5c72a7cfa93433325e3e5f1584146f3" kind="function"><name>range_search</name></member>
     <member refid="structfaiss_1_1IndexIDMapTemplate_1a4f8a46a711b5f2d4f921c717b4ebba37" kind="function"><name>check_compatible_for_merge</name></member>
     <member refid="structfaiss_1_1IndexIDMapTemplate_1ad31234e502c5dd7c8881a25cd582424a" kind="function"><name>sa_code_size</name></member>
-    <member refid="structfaiss_1_1IndexIDMapTemplate_1ab8d1ceb41636c39ea47a91fcb923e0db" kind="function"><name>add_sa_codes</name></member>
   </compound>
   <compound refid="structfaiss_1_1IndexIDMapTemplate" kind="struct"><name>faiss::IndexIDMapTemplate</name>
     <member refid="structfaiss_1_1IndexIDMapTemplate_1ad3e369ada29b7412c33e509f687efb00" kind="typedef"><name>component_t</name></member>
