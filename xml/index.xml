@@ -490,6 +490,7 @@
     <member refid="structfaiss_1_1ClusteringParameters_1aff8bc9b060e71281fa5f71a9ffe050f5" kind="variable"><name>init_method</name></member>
     <member refid="structfaiss_1_1ClusteringParameters_1aa2bc579bc412e9b8f466156fef6b4eff" kind="variable"><name>afkmc2_chain_length</name></member>
     <member refid="structfaiss_1_1ClusteringParameters_1ae8330537c993d9e649196c85b31066fa" kind="variable"><name>early_stop_threshold</name></member>
+    <member refid="structfaiss_1_1ClusteringParameters_1a84a51c2d506530e8900272e5beef8780" kind="variable"><name>use_super_kmeans</name></member>
     <member refid="structfaiss_1_1Clustering_1a2fa90a2681dc42faaf2435e63a5ae9b4" kind="function"><name>Clustering</name></member>
     <member refid="structfaiss_1_1Clustering_1afd25cc6832b576ce4d0d7430e8ee3bff" kind="function"><name>Clustering</name></member>
     <member refid="structfaiss_1_1Clustering_1a097ae80bb9d39da6657f35bd00da39f2" kind="function"><name>train</name></member>
@@ -525,6 +526,7 @@
     <member refid="structfaiss_1_1ClusteringParameters_1aff8bc9b060e71281fa5f71a9ffe050f5" kind="variable"><name>init_method</name></member>
     <member refid="structfaiss_1_1ClusteringParameters_1aa2bc579bc412e9b8f466156fef6b4eff" kind="variable"><name>afkmc2_chain_length</name></member>
     <member refid="structfaiss_1_1ClusteringParameters_1ae8330537c993d9e649196c85b31066fa" kind="variable"><name>early_stop_threshold</name></member>
+    <member refid="structfaiss_1_1ClusteringParameters_1a84a51c2d506530e8900272e5beef8780" kind="variable"><name>use_super_kmeans</name></member>
   </compound>
   <compound refid="structfaiss_1_1ClusteringInitialization" kind="struct"><name>faiss::ClusteringInitialization</name>
     <member refid="structfaiss_1_1ClusteringInitialization_1aab275fd7003b0676edc68eb8fb6546f6" kind="variable"><name>d</name></member>
@@ -562,6 +564,7 @@
     <member refid="structfaiss_1_1ClusteringParameters_1aff8bc9b060e71281fa5f71a9ffe050f5" kind="variable"><name>init_method</name></member>
     <member refid="structfaiss_1_1ClusteringParameters_1aa2bc579bc412e9b8f466156fef6b4eff" kind="variable"><name>afkmc2_chain_length</name></member>
     <member refid="structfaiss_1_1ClusteringParameters_1ae8330537c993d9e649196c85b31066fa" kind="variable"><name>early_stop_threshold</name></member>
+    <member refid="structfaiss_1_1ClusteringParameters_1a84a51c2d506530e8900272e5beef8780" kind="variable"><name>use_super_kmeans</name></member>
   </compound>
   <compound refid="structfaiss_1_1CMax" kind="struct"><name>faiss::CMax</name>
     <member refid="structfaiss_1_1CMax_1a4b83239e1d9b4aced927ba7ff4173d00" kind="typedef"><name>T</name></member>
@@ -2371,10 +2374,10 @@
     <member refid="structfaiss_1_1HadamardRotation_1aa1ce92b4a61a605755011fe0a8233cad" kind="function"><name>init</name></member>
     <member refid="structfaiss_1_1HadamardRotation_1a36e4f4f76f451e7b4724aabca37d867c" kind="function"><name>train</name></member>
     <member refid="structfaiss_1_1HadamardRotation_1a8b51c06a5b6ba821394c7f9ae313043c" kind="function"><name>apply_noalloc</name></member>
+    <member refid="structfaiss_1_1HadamardRotation_1a843bd3c452ad07f0288fccf155b9bc36" kind="function"><name>reverse_transform</name></member>
     <member refid="structfaiss_1_1HadamardRotation_1a026d7491ad09a3cd017752aebaf2a11e" kind="function"><name>check_identical</name></member>
     <member refid="structfaiss_1_1HadamardRotation_1a4daf2a8a3b1a30d6f4659c8032cd65ba" kind="function"><name>HadamardRotation</name></member>
     <member refid="structfaiss_1_1VectorTransform_1a99fb80aeff049dc92300d2ed79d30883" kind="function"><name>apply</name></member>
-    <member refid="structfaiss_1_1VectorTransform_1a0913e3b521a6d34f523c291508e82adb" kind="function"><name>reverse_transform</name></member>
   </compound>
   <compound refid="structfaiss_1_1HammingComputer16__tpl" kind="struct"><name>faiss::HammingComputer16_tpl</name>
   </compound>
@@ -10914,6 +10917,7 @@
     <member refid="structfaiss_1_1ClusteringParameters_1aff8bc9b060e71281fa5f71a9ffe050f5" kind="variable"><name>init_method</name></member>
     <member refid="structfaiss_1_1ClusteringParameters_1aa2bc579bc412e9b8f466156fef6b4eff" kind="variable"><name>afkmc2_chain_length</name></member>
     <member refid="structfaiss_1_1ClusteringParameters_1ae8330537c993d9e649196c85b31066fa" kind="variable"><name>early_stop_threshold</name></member>
+    <member refid="structfaiss_1_1ClusteringParameters_1a84a51c2d506530e8900272e5beef8780" kind="variable"><name>use_super_kmeans</name></member>
     <member refid="structfaiss_1_1ProgressiveDimClustering_1a2aaf79f1097e2486baa90159beef78c0" kind="function"><name>ProgressiveDimClustering</name></member>
     <member refid="structfaiss_1_1ProgressiveDimClustering_1a7f57b272da0c452d8dc0970e2ee25a01" kind="function"><name>ProgressiveDimClustering</name></member>
     <member refid="structfaiss_1_1ProgressiveDimClustering_1a084b641b0872a2a9b69af1cedb202d35" kind="function"><name>train</name></member>
@@ -10938,6 +10942,7 @@
     <member refid="structfaiss_1_1ClusteringParameters_1aff8bc9b060e71281fa5f71a9ffe050f5" kind="variable"><name>init_method</name></member>
     <member refid="structfaiss_1_1ClusteringParameters_1aa2bc579bc412e9b8f466156fef6b4eff" kind="variable"><name>afkmc2_chain_length</name></member>
     <member refid="structfaiss_1_1ClusteringParameters_1ae8330537c993d9e649196c85b31066fa" kind="variable"><name>early_stop_threshold</name></member>
+    <member refid="structfaiss_1_1ClusteringParameters_1a84a51c2d506530e8900272e5beef8780" kind="variable"><name>use_super_kmeans</name></member>
     <member refid="structfaiss_1_1ProgressiveDimClusteringParameters_1a8611a01f2d1c9b35af4871ce53e98160" kind="function"><name>ProgressiveDimClusteringParameters</name></member>
   </compound>
   <compound refid="structfaiss_1_1ProgressiveDimIndexFactory" kind="struct"><name>faiss::ProgressiveDimIndexFactory</name>
@@ -13209,6 +13214,7 @@
     <member refid="structfaiss_1_1ClusteringParameters_1aff8bc9b060e71281fa5f71a9ffe050f5" kind="variable"><name>init_method</name></member>
     <member refid="structfaiss_1_1ClusteringParameters_1aa2bc579bc412e9b8f466156fef6b4eff" kind="variable"><name>afkmc2_chain_length</name></member>
     <member refid="structfaiss_1_1ClusteringParameters_1ae8330537c993d9e649196c85b31066fa" kind="variable"><name>early_stop_threshold</name></member>
+    <member refid="structfaiss_1_1ClusteringParameters_1a84a51c2d506530e8900272e5beef8780" kind="variable"><name>use_super_kmeans</name></member>
   </compound>
   <compound refid="structfaiss_1_1nn_1_1Tensor2DTemplate" kind="struct"><name>faiss::nn::Tensor2DTemplate</name>
     <member refid="structfaiss_1_1nn_1_1Tensor2DTemplate_1a29281a69927dd6b140690dfbdbd87cfb" kind="variable"><name>shape</name></member>
